@@ -1,5 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .container
+    .wrapper
+      form.form-signin(action='', method='post', name='Login_Form')
+        h3.form-signin-heading Universal Student Collective
+        hr.colorgraph
+        br
+        input.form-control(type='text', name='Username', placeholder='Username', required='', autofocus='')
+        input.form-control(type='password', name='Password', placeholder='Password', required='')
+        button.btn.btn-lg.btn-primary.btn-block(name='SignIn', value='Login', type='Submit') Sign In
+        button.btn.btn-lg.btn-primary.btn-block(name='Submit', value='Login', type='Submit') Not Enrolled? Sign up!
