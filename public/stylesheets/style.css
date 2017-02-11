@@ -62,3 +62,76 @@ input[type="password"] {
     background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 /* End – Log In Page Info */
+
+/* Main Page */
+
+#GrayMenu {  
+    background-color: lightgray;   
+}  
+ 
+#GrayMenu ul li a {  
+    color: #ffffff;  
+}  
+ 
+        #GrayMenu ul li:hover {  
+             background-color: #696969;
+             border-radius: 10px;  
+        }  
+        
+        .mainFont {
+            font-family: 'Satisfy', cursive;
+        }
+
+        .navbar-brand {
+            font-family: 'Satisfy', cursive;
+            font-size: 24px;
+        }
+
+        .nav {
+            font-size: 16px;
+        }
+
+        body {
+            background-color: #33cccc;
+        }
+
+        .wrapper {
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+
+        .mainForm {
+            position: relative; 
+            width: 800px;
+            padding: 30px 38px 66px;
+            left: 50%;
+            top: 40%;
+            position: absolute;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            -moz-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .mainFormHeading {
+            font-family: 'Satisfy', cursive;
+            font-size: 120px;
+            margin-top: 30px;
+            font-size: 80px;
+            text-align: center;
+        }
+
+        .form-control {
+            position: relative;
+            font-size: 16px;
+            height: auto;
+            padding: 10px;
+        }
+
+        hr {
+            margin-top: 50px;
+        }
+       
+

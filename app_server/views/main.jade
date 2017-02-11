@@ -1,0 +1,42 @@
+extends layout
+
+block content
+
+nav#GrayMenu.navbar.navbar-default.navbar-fixed-top
+	.container-fluid
+		// Navbar Header Start Here
+		.navbar-header
+			button.navbar-toggle(type='button', data-toggle='collapse', data-target='#MainNavBar')
+				span.icon-bar(style='background-color:white')
+				span.icon-bar(style='background-color:white')
+				span.icon-bar(style='background-color:white')
+			a.navbar-brand(style='color: white', href='#') Universal Student Collective
+		// Navbar Header End Here
+		// Menu Start Here
+		div
+			ul.nav.navbar-nav.navbar-right
+				| <
+				li
+					a(href='#') Refer a Friend
+				li
+					a(href='#') Dashboard
+				li
+					a(href='#') Account
+				li
+					a(href='#') Contact Us
+		// Menu End Here
+// <nav> tag end
+// Default Navbar End Here
+hr.colorgraph
+br
+.container-fluid
+	.wrapper.mainForm
+		br
+		h1(style="font-family: 'Satisfy', cursive;") Universal Student Collective
+		input.form-control(type='text', name='Username', placeholder='Search', autofocus='')
+		br
+		.btn-group.btn-group-justified
+			.btn-group
+				button.btn.btn-success(name='findService', value='findService', type='button') Find Service
+			.btn-group
+				button.btn.btn-warning(name='offerService', value='offerService', type='button') Offer Service
