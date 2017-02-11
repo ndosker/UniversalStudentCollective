@@ -73,65 +73,65 @@ input[type="password"] {
     color: #ffffff;  
 }  
  
-        #GrayMenu ul li:hover {  
-             background-color: #696969;
-             border-radius: 10px;  
-        }  
-        
-        .mainFont {
-            font-family: 'Satisfy', cursive;
-        }
+#GrayMenu ul li:hover {
+     background-color: #696969;
+     border-radius: 10px;
+}
 
-        .navbar-brand {
-            font-family: 'Satisfy', cursive;
-            font-size: 24px;
-        }
+.mainFont {
+    font-family: 'Satisfy', cursive;
+}
 
-        .nav {
-            font-size: 16px;
-        }
+.navbar-brand {
+    font-family: 'Satisfy', cursive;
+    font-size: 24px;
+}
 
-        body {
-            background-color: #33cccc;
-        }
+.nav {
+    font-size: 16px;
+}
 
-        .wrapper {
-            margin-top: 80px;
-            margin-bottom: 20px;
-        }
+body {
+    background-color: #33cccc;
+}
 
-        .mainForm {
-            position: relative; 
-            width: 800px;
-            padding: 30px 38px 66px;
-            left: 50%;
-            top: 40%;
-            position: absolute;
-            -webkit-transform: translate3d(-50%, -50%, 0);
-            -moz-transform: translate3d(-50%, -50%, 0);
-            transform: translate3d(-50%, -50%, 0);
-            background-color: white;
-            border-radius: 10px;
-            text-align: center;
-        }
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
 
-        .mainFormHeading {
-            font-family: 'Satisfy', cursive;
-            font-size: 120px;
-            margin-top: 30px;
-            font-size: 80px;
-            text-align: center;
-        }
+.mainForm {
+    position: relative;
+    width: 800px;
+    padding: 30px 38px 66px;
+    left: 50%;
+    top: 40%;
+    position: absolute;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
 
-        .form-control {
-            position: relative;
-            font-size: 16px;
-            height: auto;
-            padding: 10px;
-        }
+.mainFormHeading {
+    font-family: 'Satisfy', cursive;
+    font-size: 120px;
+    margin-top: 30px;
+    font-size: 80px;
+    text-align: center;
+}
 
-        hr {
-            margin-top: 50px;
-        }
+.form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+}
+
+hr {
+    margin-top: 50px;
+}
        
 
