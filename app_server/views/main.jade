@@ -1,119 +1,15 @@
-doctype html
-html(lang='en')
-	head
-		meta(charset='UTF-8')
-		title Universal Student Collective
-		meta(name='viewport', content='width=device-width,initial-scale=1')
-		link(href='https://fonts.googleapis.com/css?family=Satisfy', rel='stylesheet', type='text/css')
-		link(rel='stylesheet', type='text/css', href='style.css')
-		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
-		style.
-			#GrayMenu {
-				background-color: lightgray;
-			}
-			#GrayMenu ul li a {
-				color: #ffffff;
-			}
-			#GrayMenu ul li:hover {
-				background-color: #696969;
-				border-radius: 10px;
-			}
-			.mainFont {
-				font-family: 'Satisfy', cursive;
-			}
-			.navbar-brand {
-				font-family: 'Satisfy', cursive;
-				font-size: 24px;
-			}
-			.nav {
-				font-size: 16px;
-			}
-			.bodyMain {
-				background-color: #55c6c5;
-			}
-			.wrapper {
-				margin-top: 80px;
-				margin-bottom: 20px;
-			}
-			.mainForm {
-				position: relative;
-				width: 800px;
-				padding: 30px 38px 66px;
-				left: 50%;
-				top: 40%;
-				position: absolute;
-				-webkit-transform: translate3d(-50%, -50%, 0);
-				-moz-transform: translate3d(-50%, -50%, 0);
-				transform: translate3d(-50%, -50%, 0);
-				background-color: white;
-				border-radius: 10px;
-				text-align: center;
-			}
-			.mainFormHeading {
-				font-family: 'Satisfy', cursive;
-				font-size: 120px;
-				margin-top: 30px;
-				font-size: 80px;
-				text-align: center;
-			}
-			.form-control {
-				position: relative;
-				font-size: 16px;
-				height: auto;
-				padding: 10px;
-			}
-			hr {
-				margin-top: 50px;
-			}
-			.colorgraph {
-				height: 7px;
-				border-top: 0;
-				background: #c4e17f;
-				border-radius: 5px;
-				background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-				background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-				background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-				background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-			}
-	body.bodyMain
-		// Default Navbar Start Here
-		// <nav> tag  start with classes .navbar and .navbar-default and .navbar-fixed-top
-		nav#GrayMenu.navbar.navbar-default.navbar-fixed-top
-			.container-fluid
-				// Navbar Header Start Here
-				.navbar-header
-					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#MainNavBar')
-						span.icon-bar(style='background-color:white')
-						span.icon-bar(style='background-color:white')
-						span.icon-bar(style='background-color:white')
-					a.navbar-brand(style='color: white', href='#') Universal Student Collective
-				// Navbar Header End Here
-				// Menu Start Here
-				div
-					ul.nav.navbar-nav.navbar-right
-						li
-							a(href='#') Refer a Friend
-						li
-							a(href='#') Dashboard
-						li
-							a(href='#') Account
-						li
-							a(href='#') Contact Us
-				// Menu End Here
-		// <nav> tag end
-		// Default Navbar End Here
-		hr.colorgraph
-		br
-		.container-fluid
-			.wrapper.mainForm
-				br
-				h1(style="font-family: 'Satisfy', cursive;") Universal Student Collective
-				input.form-control(type='text', name='Username', placeholder='Search', autofocus='')
-				br
-				.btn-group.btn-group-justified
-					.btn-group
-						button.btn.btn-success(name='findService', value='findService', type='button') Find Service
-					.btn-group
-						button.btn.btn-warning(name='offerService', value='offerService', type='button') Offer Service
-		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
-		script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+extends layout_navigation
+
+block content
+	.container-fluid
+		.wrapper.mainForm
+			br
+			h1(style="font-family: 'Satisfy', cursive;") Universal Student Collective
+			input.form-control(type='text', name='Username', placeholder='Search', autofocus='')
+			br
+			.btn-group.btn-group-justified
+				.btn-group
+					button.btn.btn-success(name='findService', value='findService', type='button') Find Service
+				.btn-group
+					button.btn.btn-warning(name='offerService', value='offerService', type='button') Offer Service
+
