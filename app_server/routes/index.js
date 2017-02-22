@@ -7,6 +7,7 @@ var ctrlLocations = require('../controllers/locations');
 /* Locations pages */
 router.get('/', ctrlLocations.login);
 router.get('/main', ctrlLocations.main);
+router.get('/pets', ctrlLocations.pets);
 
 /* GET home page. */
 // var homepageController = function (req, res) {
