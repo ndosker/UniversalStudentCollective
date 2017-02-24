@@ -1,129 +1,149 @@
-doctype html
-html(lang='en')
-	head
-		meta(charset='UTF-8')
-		title Universal Student Collective
-		meta(name='viewport', content='width=device-width,initial-scale=1')
-		link(href='https://fonts.googleapis.com/css?family=Satisfy', rel='stylesheet', type='text/css')
-		link(rel='stylesheet', type='text/css', href='/bootstrap/css/bootstrap.css')
-		style.
-			#GrayMenu {
-				background-color: lightgray;
-			}
-			#GrayMenu ul li a {
-				color: #ffffff;
-			}
-			#GrayMenu ul li:hover {
-				background-color: #696969;
-				border-radius: 10px;
-			}
-			.mainFont {
-				font-family: 'Satisfy', cursive;
-			}
-			.navbar-brand {
-				font-family: 'Satisfy', cursive;
-				font-size: 24px;
-			}
-			.nav {
-				font-size: 16px;
-			}
-			.bodyMain {
-				background-color: #55c6c5;
-			}
-			.wrapper {
-				margin-top: 80px;
-				margin-bottom: 20px;
-			}
-			.mainForm {
-				position: relative;
-				width: 800px;
-				padding: 30px 38px 66px;
-				left: 50%;
-				top: 40%;
-				position: absolute;
-				-webkit-transform: translate3d(-50%, -50%, 0);
-				-moz-transform: translate3d(-50%, -50%, 0);
-				transform: translate3d(-50%, -50%, 0);
-				background-color: white;
-				border-radius: 10px;
-				text-align: center;
-			}
-			.mainFormHeading {
-				font-family: 'Satisfy', cursive;
-				font-size: 120px;
-				margin-top: 30px;
-				font-size: 80px;
-				text-align: center;
-			}
-			.form-control {
-				position: relative;
-				font-size: 16px;
-				height: auto;
-				padding: 10px;
-			}
-			hr {
-				margin-top: 50px;
-			}
-			.colorgraph {
-				height: 7px;
-				border-top: 0;
-				background: #c4e17f;
-				border-radius: 5px;
-				background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-				background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-				background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-				background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-			}
-	body.bodyMain
-		// Default Navbar Start Here
-		// <nav> tag  start with classes .navbar and .navbar-default and .navbar-fixed-top
-		nav#GrayMenu.navbar.navbar-default.navbar-fixed-top
-			.container-fluid
-				// Navbar Header Start Here
-				.navbar-header
-					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#MainNavBar')
-						span.icon-bar(style='background-color:white')
-						span.icon-bar(style='background-color:white')
-						span.icon-bar(style='background-color:white')
-					a.navbar-brand(style='color: white', href='#') Universal Student Collective
-				// Navbar Header End Here
-				// Menu Start Here
-				div
-					ul.nav.navbar-nav.navbar-right
-						li
-							a(href='#') Refer a Friend
-						li
-							a(href='#') Dashboard
-						li
-							a(href='#') Account
-						li
-							a(href='#') Contact Us
-				// Menu End Here
-		// <nav> tag end
-		// Default Navbar End Here
-		hr.colorgraph
-		br
-		.container-fluid
-			.wrapper.mainForm
-				br
-				h1(style="font-family: 'Satisfy', cursive;") Universal Student Collective
-				h3(style="font-family: 'Satisfy', cursive;") Pet Services
-					ul.nav.nav-tabs
-						li.active
-							a(data-toggle='tab', href='#find_services') Find Services
-						li
-							a(data-toggle='tab', href='#offer_services') Offer Services
-						
-					.tab-content
-						#find_services.tab-pane.fade.in.active
-							h3 Find Services
-							p
-								| Information submission form related to finding pet related services.
-						#offer_services.tab-pane.fade
-							h3 Offer Services
-							p
-								| Information submission form related to offering pet related servcies.
-					
+extends layout_navigation
 
-		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
-		script(src='/bootstrap/js/bootstrap.min.js')
+block content
+		.container-fluid
+			.wrapper.mainForm2
+				h1#pet Pet Services
+				.container
+					.col-md-8
+						// Tabs
+						.tab-v1
+							ul.nav.nav-tabs
+								li.active
+									a(href='#tab-1', data-toggle='tab', aria-expanded='true') Search for Services
+								li
+									a(href='#tab-2', data-toggle='tab', aria-expanded='false') Offer Services
+								//
+									<li class>
+									<a href="#tab-3" data-toggle="tab" aria-expanded="false">Tab 3</a>
+									</li>
+							.tab-content(style='border:solid 1px #ddd; border-radius: 4px;')
+								// Tab 1 Content
+								#tab-1.tab-pane.fade.active.in
+									form(action='')
+										header.petform What do you need?
+										fieldset
+											section.col.col-4
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-road
+													|  Dog Walking
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-home
+													|  House Sitting
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-tint
+													|  Drop-In Visits
+												button.btn.btn-default.btn-lg(type='button')  Other
+											section.col.col-4
+												//
+													<label class="input">
+													<div class="btn-group btn-group-sm" role="group" style="vertical-align:top;">
+													<button class="btn btn-default">I live...</button>
+													<button class="btn dropdown-toggle btn-default" data-toggle="dropdown">
+													<span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu">
+													<li>On-Campus</li>
+													<li>Off-Campus</li>
+													</ul>
+													</div>
+													</label>
+												.row
+													.col-md-6.col-lg-6
+														label.petform(style='display:block') Dog Boarding at
+														input.petform(type='text', placeholder='College or University')
+													.col-md-6.col-lg-6
+														label.petform(style='display:block') For these days:
+														.btn-group.btn-group-sm(role='group')
+															button.btn.btn-default(type='button') S
+															button.btn.btn-default(type='button') M
+															button.btn.btn-default(type='button') T
+															button.btn.btn-default(type='button') W
+															button.btn.btn-default(type='button') T
+															button.btn.btn-default(type='button') F
+															button.btn.btn-default(type='button') S
+											.row
+												.col.col-lg-6.col-md-6.col-sm-6
+													h4(style='display:block;') Dog Size
+													button.btn.btn-default.btn-md(type='button') Small
+													button.btn.btn-default.btn-md(type='button') Medium
+													button.btn.btn-default.btn-md(type='button') Large
+													button.btn.btn-default.btn-md(type='button') Giant
+												.col.col-lg-6.col-md-6.col-sm-6
+													h4(style='display:block;') Find
+													.input-group
+														input.form-control(type='text', placeholder='Search for...')
+														span.input-group-btn
+															button.btn.btn-default(type='button') Go!
+													// /input-group
+												// /.col-lg-6
+												// /.row
+								// End Tab 1 Content
+								// Tab 2 Content
+								#tab-2.tab-pane.fade
+									form(action='')
+										header.petform What can you do?
+										fieldset
+											section.col.col-4
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-road
+													|  Dog Walking
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-home
+													|  House Sitting
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-tint
+													|  Drop-In Visits
+												button.btn.btn-default.btn-lg(type='button')  Other
+											section.col.col-4
+												//
+													<label class="input">
+													<div class="btn-group btn-group-sm" role="group" style="vertical-align:top;">
+													<button class="btn btn-default">I live...</button>
+													<button class="btn dropdown-toggle btn-default" data-toggle="dropdown">
+													<span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu">
+													<li>On-Campus</li>
+													<li>Off-Campus</li>
+													</ul>
+													</div>
+													</label>
+												.row
+													.col-md-6.col-lg-6
+														label.petform(style='display:block') Dog Boarding at
+														input.petform(type='text', placeholder='College or University')
+													.col-md-6.col-lg-6
+														label.petform(style='display:block') For these days:
+														.btn-group.btn-group-sm(role='group')
+															button.btn.btn-default(type='button') S
+															button.btn.btn-default(type='button') M
+															button.btn.btn-default(type='button') T
+															button.btn.btn-default(type='button') W
+															button.btn.btn-default(type='button') T
+															button.btn.btn-default(type='button') F
+															button.btn.btn-default(type='button') S
+											.row
+												.col.col-lg-6.col-md-6.col-sm-6
+													h4(style='display:block;') Comfortable with dogs that are
+													button.btn.btn-default.btn-md(type='button') Small
+													button.btn.btn-default.btn-md(type='button') Medium
+													button.btn.btn-default.btn-md(type='button') Large
+													button.btn.btn-default.btn-md(type='button') Giant
+												.col.col-lg-6.col-md-6.col-sm-6
+													h4(style='display:block;') Find
+													.input-group
+														input.form-control(type='text', placeholder='Search for...')
+														span.input-group-btn
+															button.btn.btn-default(type='button') Go!
+													// /input-group
+												// /.col-lg-6
+												// /.row
+								// End Tab 2 Content
+								//
+									Tab 3 Content
+									<div class="tab-pane fade" id="tab-3">
+									<p>Tab 3 Data Here </p>
+									</div>
+				script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+				script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
