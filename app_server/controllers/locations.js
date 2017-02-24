@@ -7,3 +7,8 @@ module.exports.login = function(req, res) {
 module.exports.main = function(req, res) {
 	res.render('main', {title: 'Main'});
 };
+
+/* GET Pet form page */
+module.exports.pets = function(req, res) {
+	res.render('pets', {title:'Pet Services'});
+};
