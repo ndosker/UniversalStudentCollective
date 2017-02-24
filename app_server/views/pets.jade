@@ -2,25 +2,148 @@ extends layout_navigation
 
 block content
 		.container-fluid
-			.wrapper.mainForm
-				br
-				h1(style="font-family: 'Satisfy', cursive;") Universal Student Collective
-				h3(style="font-family: 'Satisfy', cursive;") Pet Services
-					ul.nav.nav-tabs
-						li.active
-							a(data-toggle='tab', href='#find_services') Find Services
-						li
-							a(data-toggle='tab', href='#offer_services') Offer Services
-					.wrapper
-						form(action='')
-							button.btn.btn-default.btn-lg(type='button')
-								span.glyphicon.glyphicon-road
-								|  Dog Walking
-							button.btn.btn-default.btn-lg(type='button')
-								span.glyphicon.glyphicon-home
-								|  House Sitting
-							button.btn.btn-default.btn-lg(type='button')  Drop-In Visits
-							button.btn.btn-default.btn-lg(type='button')  Other
-
-		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
-		script(src='/bootstrap/js/bootstrap.min.js')
+			.wrapper.mainForm2
+				h1#pet Pet Services
+				.container
+					.col-md-8
+						// Tabs
+						.tab-v1
+							ul.nav.nav-tabs
+								li.active
+									a(href='#tab-1', data-toggle='tab', aria-expanded='true') Search for Services
+								li
+									a(href='#tab-2', data-toggle='tab', aria-expanded='false') Offer Services
+								//
+									<li class>
+									<a href="#tab-3" data-toggle="tab" aria-expanded="false">Tab 3</a>
+									</li>
+							.tab-content(style='border:solid 1px #ddd; border-radius: 4px;')
+								// Tab 1 Content
+								#tab-1.tab-pane.fade.active.in
+									form(action='')
+										header.petform What do you need?
+										fieldset
+											section.col.col-4
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-road
+													|  Dog Walking
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-home
+													|  House Sitting
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-tint
+													|  Drop-In Visits
+												button.btn.btn-default.btn-lg(type='button')  Other
+											section.col.col-4
+												//
+													<label class="input">
+													<div class="btn-group btn-group-sm" role="group" style="vertical-align:top;">
+													<button class="btn btn-default">I live...</button>
+													<button class="btn dropdown-toggle btn-default" data-toggle="dropdown">
+													<span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu">
+													<li>On-Campus</li>
+													<li>Off-Campus</li>
+													</ul>
+													</div>
+													</label>
+												.row
+													.col-md-6.col-lg-6
+														label.petform(style='display:block') Dog Boarding at
+														input.petform(type='text', placeholder='College or University')
+													.col-md-6.col-lg-6
+														label.petform(style='display:block') For these days:
+														.btn-group.btn-group-sm(role='group')
+															button.btn.btn-default(type='button') S
+															button.btn.btn-default(type='button') M
+															button.btn.btn-default(type='button') T
+															button.btn.btn-default(type='button') W
+															button.btn.btn-default(type='button') T
+															button.btn.btn-default(type='button') F
+															button.btn.btn-default(type='button') S
+											.row
+												.col.col-lg-6.col-md-6.col-sm-6
+													h4(style='display:block;') Dog Size
+													button.btn.btn-default.btn-md(type='button') Small
+													button.btn.btn-default.btn-md(type='button') Medium
+													button.btn.btn-default.btn-md(type='button') Large
+													button.btn.btn-default.btn-md(type='button') Giant
+												.col.col-lg-6.col-md-6.col-sm-6
+													h4(style='display:block;') Find
+													.input-group
+														input.form-control(type='text', placeholder='Search for...')
+														span.input-group-btn
+															button.btn.btn-default(type='button') Go!
+													// /input-group
+												// /.col-lg-6
+												// /.row
+								// End Tab 1 Content
+								// Tab 2 Content
+								#tab-2.tab-pane.fade
+									form(action='')
+										header.petform What can you do?
+										fieldset
+											section.col.col-4
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-road
+													|  Dog Walking
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-home
+													|  House Sitting
+												button.btn.btn-default.btn-lg(type='button')
+													span.glyphicon.glyphicon-tint
+													|  Drop-In Visits
+												button.btn.btn-default.btn-lg(type='button')  Other
+											section.col.col-4
+												//
+													<label class="input">
+													<div class="btn-group btn-group-sm" role="group" style="vertical-align:top;">
+													<button class="btn btn-default">I live...</button>
+													<button class="btn dropdown-toggle btn-default" data-toggle="dropdown">
+													<span class="caret"></span>
+													</button>
+													<ul class="dropdown-menu">
+													<li>On-Campus</li>
+													<li>Off-Campus</li>
+													</ul>
+													</div>
+													</label>
+												.row
+													.col-md-6.col-lg-6
+														label.petform(style='display:block') Dog Boarding at
+														input.petform(type='text', placeholder='College or University')
+													.col-md-6.col-lg-6
+														label.petform(style='display:block') For these days:
+														.btn-group.btn-group-sm(role='group')
+															button.btn.btn-default(type='button') S
+															button.btn.btn-default(type='button') M
+															button.btn.btn-default(type='button') T
+															button.btn.btn-default(type='button') W
+															button.btn.btn-default(type='button') T
+															button.btn.btn-default(type='button') F
+															button.btn.btn-default(type='button') S
+											.row
+												.col.col-lg-6.col-md-6.col-sm-6
+													h4(style='display:block;') Comfortable with dogs that are
+													button.btn.btn-default.btn-md(type='button') Small
+													button.btn.btn-default.btn-md(type='button') Medium
+													button.btn.btn-default.btn-md(type='button') Large
+													button.btn.btn-default.btn-md(type='button') Giant
+												.col.col-lg-6.col-md-6.col-sm-6
+													h4(style='display:block;') Find
+													.input-group
+														input.form-control(type='text', placeholder='Search for...')
+														span.input-group-btn
+															button.btn.btn-default(type='button') Go!
+													// /input-group
+												// /.col-lg-6
+												// /.row
+								// End Tab 2 Content
+								//
+									Tab 3 Content
+									<div class="tab-pane fade" id="tab-3">
+									<p>Tab 3 Data Here </p>
+									</div>
+				script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js')
+				script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
