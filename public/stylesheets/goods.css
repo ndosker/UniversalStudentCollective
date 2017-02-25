@@ -1,0 +1,70 @@
+.main {
+    text-align: left;
+    font-family: SansSerif, serif;
+    margin: 75px;
+    font-size: 45px;
+    color: #FFFAFA;
+
+}
+
+html, body, .container {
+    text-transform: capitalize;
+    font-style: oblique;
+    text-align: left;
+    height: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background: rgb(95, 167, 135);
+}
+
+.first {
+    float: left;
+    width: 49%;
+    height: 33%;
+    background: url("https://kennedyoffice.com/wp-content/uploads/2015/04/office-suppliy-banner.jpg") no-repeat;
+}
+
+.second {
+    float: left;
+    width: 49%;
+    height: 50%;
+    background: url("http://s3.india.com/wp-content/uploads/2016/05/indianproducts.jpg") no-repeat;
+}
+
+
+.third {
+    float: right;
+    width: 51%;
+    height: 45%;
+    background: url("http://cdn3-www.comingsoon.net/assets/uploads/1970/01/file_587384_book-adaptations-0192014-212303.jpg");
+}
+
+.fourth {
+    float: right;
+    width: 51%;
+    height: 42%;
+    background: url("http://media.salon.com/2013/08/shutterstock_64449766.jpg") ;
+}
+
+.fifth {
+    float: left;
+    width: 49%;
+    height: 50%;
+    background: url("http://midtowntire.com/images/display/506/tires-atlanta.jpg") no-repeat;
+}
+.last {
+    float: left;
+    width: 51%;
+    height: 46%;
+    background: url("http://strangenotions.com/wp-content/uploads/Dice.jpg");
+}
+
+.input[type=text] {
+    width:195px;
+    -webkit-transition: width 0.7s ease-in-out;
+    transition: width 0.7s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
