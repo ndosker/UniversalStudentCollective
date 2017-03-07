@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Universal Student Collective</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.min.css">
+    <style>
+        #GrayMenu {
+            background-color: #D8D8D8;
+        }
+        #GrayMenu ul li a {
+            color: #ffffff;
+        }
+        #GrayMenu ul li:hover {
+            border-radius: 10px;
+        }
+        .mainFont {
+            font-family: 'Satisfy', cursive;
+        }
+        .navbar-brand {
+            font-family: 'Satisfy', cursive;
+            font-size: 24px;
+        }
+        .nav {
+            font-size: 16px;
+        }
+        .bodyMain {
+            background-color: #55c6c5;
+        }
+        .wrapper {
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+        .mainForm {
+            position: relative;
+            width: 800px;
+            padding: 30px 38px 66px;
+            left: 50%;
+            top: 40%;
+            position: absolute;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            -moz-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .mainForm2 {
+            position: relative;
+            width: 800px;
+            padding: 30px 38px 66px;
+            left: 50%;
+            top: 40%;
+            position: absolute;
+            -webkit-transform: translate3d(-50%, -50%, 0);
+            -moz-transform: translate3d(-50%, -50%, 0);
+            transform: translate3d(-50%, -50%, 0);
+            background-color: white;
+            border-radius: 10px;
+        }
+        .mainFormHeading {
+            font-family: 'Satisfy', cursive;
+            font-size: 120px;
+            margin-top: 30px;
+            font-size: 80px;
+            text-align: center;
+        }
+        .form-control {
+            position: relative;
+            font-size: 16px;
+            height: auto;
+            padding: 10px;
+        }
+        hr {
+            margin-top: 50px;
+        }
+        #pet {
+            text-align: center;
+        }
+        .petform {
+            font-size: 16px;
+            height: 34px;
+            padding: 6px 12px 6px 12px;
+        }
+        .colorgraph {
+            height: 7px;
+            border-top: 0px;
+            background: #c4e17f;
+            border-radius: 5px;
+            background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+            background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+            background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+            background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+        }
+        ul.nav li.dropdown:hover ul.dropdown-menu {
+            display: block;
+            background-color: gray;
+        }
+    </style>
+    <script src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery-3.1.1.min.js"></script>
+</head>
+<body class="bodyMain">
+<nav id="GrayMenu" class="navbar navbar-default navbar-fixed-top col-md-12">
+    <div class="container-fluid">
+        <div class="col-md-3 navbar-header navbar-left">
+            <button type="button" data-toggle="collapse" data-target="#MainNavBar" class="navbar-toggle"><span style="background-color:white" class="icon-bar"></span><span style="background-color:white" class="icon-bar"></span><span style="background-color:white" class="icon-bar"></span></button><a style="color: white" href="#" class="navbar-brand">Universal Student Collective</a>
+        </div>
+        <div class="col-md-6"><span class="input-group">
+            <form role="search" method="get" action="" class="navbar-form navbar-left">
+              <div class="form-group">
+                <input id="searchBox" type="text" name="q" value="" class="form-control">
+                <button type="submit" class="btn btn-default"><span id="searchButton" class="glyphicon glyphicon-search"></span></button>
+              </div>
+              <button id="findButton" type="submit" class="btn btn-outline-secondary text-center"><span id="findButtonSpan" class="glyphicon glyphicon-globe"></span></button>
+              <button type="submit" class="btn btn-outline-secondary text-center"><span id="offerButton" class="glyphicon glyphicon-briefcase"></span></button>
+            </form></span></div>
+        <div class="nav navbar-nav navbar-right centerMe">
+            <div class="btn-group centerMe">
+                <button type="button" class="btn btn-secondary">Notifications</button>
+                <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">My Account</button>
+                <div class="dropdown-menu"><a href="#" class="dropdown-item">Account</a><a href="#" class="dropdown-item">Refer Someone</a>
+                    <div class="dropdown-divider"></div><a href="#" class="dropdown-item">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<hr class="colorgraph">
+<div id="leftNavBar" class="col-med-3 leftNavBar"><br>
+    <p style="font-size: 18px;"><strong>Services</strong></p>
+    <hr class="navLine"><span style="text-align: center">
+        <ul style="list-style-type:none" class="navList">
+          <li><a href="#" style="font-size: 16px;">Events</a></li>
+          <li><a href="#" style="font-size: 16px;">Food</a></li>
+          <li><a href="#" style="font-size: 16px;">Goods</a></li>
+          <li><a href="#" style="font-size: 16px;">Pet Services</a></li>
+          <li><a href="#" style="font-size: 16px;">Ride Share</a></li>
+        </ul></span>
+</div>
+<div id="leftSubNavBar" class="leftSubNavBar">
+    <p id="foodExchange" style="font-size: 16px;"><strong>Food Exchange</strong></p>
+    <hr id="leftSub">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#1a" data-toggle="tab">Find</a></li>
+        <li><a href="#" data-toggle="tab">Offer</a></li>
+    </ul>
+    <div class="tab-content clearfix">
+        <div id="1a" class="tab-pane active">
+            <div class="row">
+                <label>My Location:</label>
+                <input>
+                <label>Meal:</label>
+                <select>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="brunch">Brunch</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="soiree">Soirée</option>
+                    <option value="dinner">Dinner</option>
+                </select>
+            </div>
+            <div class="row">
+                <form action=""><strong>Date:</strong>
+                    <input type="date" name="date">
+                    <label>Type:</label>
+                    <select>
+                        <option value="sit-down">Sit-down</option>
+                        <option value="togo">To-go</option>
+                    </select>
+                </form>
+            </div>
+            <div class="row">
+                <form action="">
+                    <label>Cost:</label>
+                    <select>
+                        <option value="breakfast">Free</option>
+                        <option value="brunch">Volunteer</option>
+                        <option value="lunch">$[0-5]</option>
+                        <option value="soiree">$$[5-10]</option>
+                        <option value="dinner">$$$[10+]</option>
+                    </select>
+                    <label>Alergies</label>
+                    <input type="radio" name="yes" value="yes"> Yes
+                    <input type="radio" name="no" value="no"> No
+                </form>
+            </div>
+            <div class="row">
+                <form action="">
+                    <label>Diety Preference:</label><br>
+                    <input type="checkbox" name="location" value="Bike"> Vegan
+                    <input type="checkbox" name="location" value="Car"> Vegetarian
+                    <input type="checkbox" name="location" value="Car"> Gluten-Free<br>
+                    <input type="checkbox" name="location" value="Car"> Paleo
+                    <input type="checkbox" name="location" value="Car"> Organic
+                    <input type="checkbox" name="location" value="Car"> Locally Grown
+                    <input type="checkbox" name="location" value="Car"> Other
+                </form>
+            </div>
+            <div class="row">
+                <form action="">
+                    <label>Meal Location:</label><br>
+                    <input type="checkbox" name="location" value="Bike"> University
+                    <input type="checkbox" name="location" value="Car"> Neighborhood
+                    <input type="checkbox" name="location" value="Car"> City<br>
+                    <input type="checkbox" name="location" value="Car"> Region
+                    <input type="checkbox" name="location" value="Car"> State
+                    <input type="checkbox" name="location" value="Car"> Country
+                    <input type="checkbox" name="location" value="Car"> World
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="rightNavBar" class="col-med-3 rightNavBar"><img id="map" src="map.png"></div>
+<div id="rightSubNavBar" class="col-med-3 rightSubNavBar"><br>
+    <p style="font-size: 18px;"><strong>Notifications</strong></p>
+    <hr class="navLine">
+</div>
+<div class="col-med-6 navFeed"></div>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
