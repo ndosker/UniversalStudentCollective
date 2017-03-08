@@ -76,7 +76,7 @@ input[type="password"] {
 
 #GrayMenu ul li:hover {
     background-color: #696969;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .mainFont {
@@ -188,6 +188,9 @@ hr {
     font-family: Garamond;
     text-align: center;
     opacity: .85;
+    line-height: 20px;
+    font-size: 16px;
+    padding-top: 0px;
 
 }
 
@@ -195,7 +198,7 @@ hr {
     border-radius: 15px;
     background-color:whitesmoke;
     width:400px;
-    height: 400px;
+    height: 500px;
     margin-left: 40px;
     margin-top: 15px;
     font-family: Garamond;
@@ -224,7 +227,7 @@ hr {
     border-radius: 15px;
     background-color:whitesmoke;
     width:400px;
-    height: 185px;
+    height: 285px;
     position: absolute;
     right:40px;
     top:-16px;
@@ -254,7 +257,7 @@ ul.navList {
 
 ul li:hover {
     background-color:gray;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 ul li a {
@@ -262,8 +265,8 @@ ul li a {
 }
 
 .row {
-    padding-top:.6em;
-    padding-bottom:.6em;
+    padding-top:.25em;
+    padding-bottom:.25em;
 }
 
 #map {
@@ -288,4 +291,31 @@ ul li a {
 p.foodExchange {
     padding-top: .5em;
     padding-bottom: 0em;
+}
+
+#offerDescription {
+    width: 280px;
+    height: 60px;
+}
+
+
+
+#GrayMenu #dropdownMenu{
+    background-color: lightgray;
+    border-radius: 1px;
+    color: gray;
+}
+}
+
+#GrayMenu #dropdownMenu ul li a {
+    background-color: gray;
+    border-radius: 0px;
+    color: #000;
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#GrayMenu #dropdownMenu a {
+    color: #444444;
 }
