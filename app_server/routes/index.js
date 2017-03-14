@@ -16,6 +16,10 @@ router.get('/rides', ctrlServices.rides);
 
 //get goods
 router.get('/goods', ctrlServices.goods);
+
+//get providers
+router.get('/providers', ctrlServices.providers);
+
 /* GET home page. */
 // var homepageController = function (req, res) {
 // 	res.render('index', {title: 'Express'});
