@@ -22,3 +22,8 @@ module.exports.rides = function(req, res) {
 module.exports.goods = function(req, res) {
 	res.render('goods', {title:'Goods'});
 };
+
+/* GET provider list */
+module.exports.providers = function(req, res) {
+	res.render('provider-list', {title:'Service Providers'});
+};
