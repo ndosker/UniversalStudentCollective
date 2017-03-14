@@ -13,6 +13,11 @@ module.exports.pets = function(req, res) {
 	res.render('pets', {title:'Pet Services'});
 };
 
+/* GET Rides form page */
+module.exports.rides = function(req, res) {
+	res.render('rides', {title:'Rideshare Services'});
+};
+
 /* GET Goods page */
 module.exports.goods = function(req, res) {
 	res.render('goods', {title:'Goods'});

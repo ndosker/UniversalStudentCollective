@@ -7,8 +7,13 @@ var ctrlLocations = require('../controllers/locations');
 /* Locations pages */
 router.get('/', ctrlLocations.login);
 router.get('/main', ctrlLocations.main);
+
 //get pets
 router.get('/pets', ctrlLocations.pets); 
+
+//get rides
+router.get('/rides', ctrlLocations.rides);
+
 //get goods
 router.get('/goods', ctrlLocations.goods);
 /* GET home page. */
