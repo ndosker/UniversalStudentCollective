@@ -9,7 +9,8 @@ router.get('/', ctrlLocations.login);
 router.get('/main', ctrlLocations.main);
 //get pets
 router.get('/pets', ctrlLocations.pets); 
-
+//get goods
+router.get('/goods', ctrlLocations.goods);
 /* GET home page. */
 // var homepageController = function (req, res) {
 // 	res.render('index', {title: 'Express'});

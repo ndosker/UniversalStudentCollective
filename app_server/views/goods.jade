@@ -1,0 +1,22 @@
+extends layout_navigation
+
+block content
+    .main
+      .title
+        h1 Universal Student Collective
+      input(type='text', name='search', placeholder='Search items for sale')
+      button(type='button', onclick="location.href='http://google.com'") Search
+      button(type='button', onclick="location.href='http://google.com'") Add a Listing!
+    .container
+      a(href='http://google.com')
+        .first Electronics and Office Supplies
+      a(href='http://google.com')
+        .third Movie, Music, Books
+      a(href='http://google.com')
+        .second Health and Beauty
+      a(href='http://google.com')
+        .fourth Clothing, Shoe, and Jewelry
+      a(href='http://google.com')
+        .fifth Cars and Autoparts
+      a(href='http://google.com')
+        .last Other Random Items
