@@ -1,6 +1,6 @@
-//Require mongoos
+//Require mongoose
 var mongoose = require( 'mongoose' );
-
+var gracefulShutdown;
 var dbURI = 'mongodb://localhost/UniversalStudentCollective';
 mongoose.connect(dbURI);
 
@@ -20,7 +20,7 @@ mongoose.connection.on('disconnected', function() {
 });
 
 //gracefulShutdown accepts a message and callback function
-var gracefulShutdown = function (msg, callback) {
+gracefulShutdown = function (msg, callback) {
     //close mongoose connection, pass through an anonymous function to run when closed
     mongoose.connection.close(function () {
         console.log('Mongoose disconnected through ' + msg);  // output message and callback when Mongoose connection is closed
@@ -53,6 +53,6 @@ process.on('SIGTERM', function () {
     });
 });
 
-
+require('./service_providers');
     
     
