@@ -5,117 +5,41 @@ html(lang='en')
 		title Universal Student Collective
 		meta(name='viewport', content='width=device-width,initial-scale=1')
 		link(href='https://fonts.googleapis.com/css?family=Satisfy', rel='stylesheet', type='text/css')
-		link(rel='stylesheet', type='text/css', href='stylesheets/style.css')
+		link(rel='stylesheet', type='text/css', href='/stylesheets/mainStyle.css')
 		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
 		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-		style.
-			.mainFont {
-				font-family: 'Satisfy', cursive;
-			}
-			.navbar-brand {
-				font-family: 'Satisfy', cursive;
-				font-size: 24px;
-			}
-			.nav {
-				font-size: 16px;
-			}
-			.bodyMain {
-				background-color: #55c6c5;
-			}
-			.wrapper {
-				margin-top: 80px;
-				margin-bottom: 20px;
-			}
-			.mainForm {
-				position: relative;
-				width: 800px;
-				padding: 30px 38px 66px;
-				left: 50%;
-				top: 40%;
-				position: absolute;
-				-webkit-transform: translate3d(-50%, -50%, 0);
-				-moz-transform: translate3d(-50%, -50%, 0);
-				transform: translate3d(-50%, -50%, 0);
-				background-color: white;
-				border-radius: 10px;
-				text-align: center;
-			}
-			.mainForm2 {
-				position: relative;
-				width: 800px;
-				padding: 30px 38px 66px;
-				left: 50%;
-				top: 40%;
-				position: absolute;
-				-webkit-transform: translate3d(-50%, -50%, 0);
-				-moz-transform: translate3d(-50%, -50%, 0);
-				transform: translate3d(-50%, -50%, 0);
-				background-color: white;
-				border-radius: 10px;
-			}
-			.mainFormHeading {
-				font-family: 'Satisfy', cursive;
-				font-size: 120px;
-				margin-top: 30px;
-				font-size: 80px;
-				text-align: center;
-			}
-			.form-control {
-				position: relative;
-				font-size: 16px;
-				height: auto;
-				padding: 10px;
-			}
-			hr {
-				margin-top: 50px;
-			}
-			#pet {
-				text-align: center;
-			}
-			.petform {
-				font-size: 16px;
-				height: 34px;
-				padding: 6px 12px 6px 12px;
-			}
-			.colorgraph {
-				height: 7px;
-				border-top: 0px;
-				background: #c4e17f;
-				border-radius: 5px;
-				background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-				background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-				background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-				background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
-			}
-			ul.nav li.dropdown:hover ul.dropdown-menu {
-				display: block;
-				background-color: gray;
-			}
+
 	body.bodyMain
+		// Main navigation bar begins here
 		nav#GrayMenu.navbar.navbar-default.navbar-fixed-top.col-md-12
-			.container-fluid
-				.col-md-3.navbar-header.navbar-left
+			.row.container-fluid
+				#uniStuCoContainer.col-md-3.navbar-header.navbar-left
 					button.navbar-toggle(type='button', data-toggle='collapse', data-target='#MainNavBar')
 						span.icon-bar(style='background-color:white')
 						span.icon-bar(style='background-color:white')
 						span.icon-bar(style='background-color:white')
-					a.navbar-brand(style='color: white', href='#') Universal Student Collective
+					a#uniStuCoHeader(href='#') Universal Student Collective
 				.col-md-6
 					span.input-group
 						form.navbar-form.navbar-left(role='search', method='get', action='')
 							.form-group
-								input#searchBox.form-control(type='text', name='q', value='')
-								| #{'   '}
+								input#searchBox(type='text', name='q', value='')
 								button.btn.btn-default(type='submit')
 									span#searchButton.glyphicon.glyphicon-search
-							| #{' '}
+
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 							button#findButton.btn.btn-outline-secondary.text-center(type='submit')
 								span#findButtonSpan.glyphicon.glyphicon-globe
-							| #{' '}
+
+							&nbsp;
+
 							button.btn.btn-outline-secondary.text-center(type='submit')
 								span#offerButton.glyphicon.glyphicon-briefcase
-							| #{' '}
+
+							&nbsp;
+
 				.nav.navbar-nav.navbar-right.centerMe
 					.btn-group.centerMe
 						button.btn.btn-secondary(type='button') Notifications
@@ -130,192 +54,421 @@ html(lang='en')
 									a.dropdown-item(href='#') Contact Us
 								li
 									a.dropdown-item(href='#') Sign Out
-		hr.colorgraph
-		#leftNavBar.col-med-3.leftNavBar
-			br
-			p(style='font-size: 18px; ')
-				strong Services
-			hr.navLine
-			span(style='text-align: center')
-				ul.navList(style='list-style-type:none')
-					li
-						a(href='#', style='font-size: 16px;') Events
-					li
-						a(href='#', style='font-size: 16px;') Meal Exchange
-					li
-						a(href='/goods', style='font-size: 16px;') Goods
-					li
-						a(href='/pets', style='font-size: 16px;') Pet Services
-					li
-						a(href='/rides', style='font-size: 16px;') Ride Share
+			#subNavContainer.row
+				ul#subNavList
+					li#eventsMenu
+						a(href='#') Events
+					li#mealMenu
+						a(href='#') Meal Share
+					li#goodsMenu
+						a(href='#') Goods
+					li#petsMenu
+						a(href='#') Pet Services
+					li#ridesMenu
+						a(href='#') Ride Share
+		// End of main navigation bar
+		// Beginning of lower left navigation bar
 		#leftSubNavBar.leftSubNavBar
-			p#foodExchange(style='font-size: 16px;')
-				strong Meal Exchange
-			hr#leftSub
-			ul.nav.nav-tabs
-				li
-					a(data-toggle='tab', href='#1a') Find
-				li.active
-					a(data-toggle='tab', href='#1b') Offer
-			.tab-content
-				#1a.tab-pane.fade
-					.row
-						label My Location:
-						input
-						label Meal:
-						select
-							option(value='breakfast') Breakfast
-							option(value='brunch') Brunch
-							option(value='lunch') Lunch
-							option(value='soiree') Soirée
-							option(value='dinner') Dinner
-					.row
-						form(action='')
-							strong Date:
-							input(type='date', name='date')
-							label Type:
+			// Beginning of Meal Tab
+			#mealTab
+				p#foodExchange(style='font-size: 16px;')
+					strong Meal Share
+				hr#leftSub
+				ul.nav.nav-tabs
+					li
+						a(data-toggle='tab', href='#1a') Find
+					li.active
+						a(data-toggle='tab', href='#1b') Offer
+				.tab-content
+					#1a.tab-pane.fade
+						.row
+							label My Location:
+							input
+							label Meal:
 							select
-								option(value='sit-down') Sit-down
-								option(value='togo') To-go
-					.row
-						form(action='')
-							label Cost:
+								option(value='breakfast') Breakfast
+								option(value='brunch') Brunch
+								option(value='lunch') Lunch
+								option(value='soiree') Soirée
+								option(value='dinner') Dinner
+						.row
+							form(action='')
+								strong Date:
+								input(type='date', name='date')
+								label Type:
+								select
+									option(value='sit-down') Sit-down
+									option(value='togo') To-go
+						.row
+							form(action='')
+								label Cost:
+								select
+									option(value='free') Free
+									option(value='volunteer') Volunteer
+									option(value='0to5') $[0-5]
+									option(value='5to10') $$[5-10]
+									option(value='10plus') $$$[10+]
+								label Alergies
+								input(type='radio', name='yes', value='yes')
+								|  Yes
+								input(type='radio', name='no', value='no')
+								|  No
+						.row
+							form(action='')
+								label Dietary Preference:
+								br
+								input(type='checkbox', name='location', value='Vegan')
+								|  Vegan
+								input(type='checkbox', name='location', value='Vegetarian')
+								|  Vegetarian
+								input(type='checkbox', name='location', value='Gluten-Free')
+								|  Gluten-Free
+								br
+								input(type='checkbox', name='location', value='Paleo')
+								|  Paleo
+								input(type='checkbox', name='location', value='Organic')
+								|  Organic
+								input(type='checkbox', name='location', value='LocallyGrown')
+								|  Locally Grown
+								input(type='checkbox', name='location', value='Other')
+								|  Other
+						.row
+							form(action='')
+								label Meal Location:
+								br
+								input(type='checkbox', name='location', value='University')
+								|  University
+								input(type='checkbox', name='location', value='Neighborhood')
+								|  Neighborhood
+								input(type='checkbox', name='location', value='City')
+								|  City
+								br
+								input(type='checkbox', name='location', value='Region')
+								|  Region
+								input(type='checkbox', name='location', value='State')
+								|  State
+								input(type='checkbox', name='location', value='Country')
+								|  Country
+								input(type='checkbox', name='location', value='World')
+								|  World
+						.row
+							button#leftSubNavBarButton.btn.btn-submit.text-center(type='submit') Find
+					#1b.tab-pane.fade.in.active
+						.row
+							label Title:
+							input(size='46')
+						.row
+							label My Location:
+							input
+							label Meal:
 							select
-								option(value='free') Free
-								option(value='volunteer') Volunteer
-								option(value='0to5') $[0-5]
-								option(value='5to10') $$[5-10]
-								option(value='10plus') $$$[10+]
-							label Alergies
-							input(type='radio', name='yes', value='yes')
-							|  Yes
-							input(type='radio', name='no', value='no')
-							|  No
+								option(value='breakfast') Breakfast
+								option(value='brunch') Brunch
+								option(value='lunch') Lunch
+								option(value='soiree') Soirée
+								option(value='dinner') Dinner
+						.row
+							form(action='')
+								strong Date:
+								input(type='date', name='date')
+								label Type:
+								select
+									option(value='sit-down') Sit-down
+									option(value='togo') To-go
+						.row
+							form(action='')
+								label Cost:
+								select
+									option(value='breakfast') Free
+									option(value='brunch') Volunteer
+									option(value='lunch') $[0-5]
+									option(value='soiree') $$[5-10]
+									option(value='dinner') $$$[10+]
+								label Alergies
+								input(type='radio', name='yes', value='yes')
+								|  Yes
+								input(type='radio', name='no', value='no')
+								|  No
+						.row
+							form(action='')
+								label Dietary Options:
+								br
+								input(type='checkbox', name='location', value='Vegan')
+								|  Vegan
+								input(type='checkbox', name='location', value='Vegetarian')
+								|  Vegetarian
+								input(type='checkbox', name='location', value='Gluten-Free')
+								|  Gluten-Free
+								br
+								input(type='checkbox', name='location', value='Paleo')
+								|  Paleo
+								input(type='checkbox', name='location', value='Organic')
+								|  Organic
+								input(type='checkbox', name='location', value='LocallyGrown')
+								|  Locally Grown
+								input(type='checkbox', name='location', value='Other')
+								|  Other
+						.row
+							form(action='')
+								label Meal Location:
+								br
+								input(type='checkbox', name='location', value='University')
+								|  University
+								input(type='checkbox', name='location', value='Neighborhood')
+								|  Neighborhood
+								input(type='checkbox', name='location', value='City')
+								|  City
+								br
+								input(type='checkbox', name='location', value='Region')
+								|  Region
+								input(type='checkbox', name='location', value='State')
+								|  State
+								input(type='checkbox', name='location', value='Country')
+								|  Country
+								input(type='checkbox', name='location', value='World')
+								|  World
+						.row
+							label Description:
+							input#offerDescription
+						.row
+							button#offer.btn.btn-submit.text-center(type='submit') Offer
+			// End of Meal Tab
+			// &lt;!&ndash;Beginning of Events Tab&ndash;&gt;
+			// <div id="eventsTab" style="display:none">
+			// <p id="foodExchange" style="font-size: 16px;"><strong>Events</strong></p>
+			// <hr id="leftSub">
+			// <ul class="nav nav-tabs">
+			// <li><a data-toggle="tab" href="#2a">Find</a></li>
+			// <li class="active"><a data-toggle="tab" href="#2b">Offer</a></li>
+			// </ul>
+			// <div class="tab-content">
+			// <div id="2a" class="tab-pane fade">
+			// <div class="row">
+			// </div>
+			// <div class="row">
+			// <button id="leftSubNavBarButton2" type="submit" class="btn btn-submit text-center">Find</button>
+			// </div>
+			// </div>
+			// </div>
+			// <div class="tab-content">
+			// <div id="2b" class="tab-pane fade in active">
+			// <div class="row">
+			// </div>
+			// <div class="row">
+			// <button id="offer2" type="submit" class="btn btn-submit text-center">Offer</button>
+			// </div>
+			// </div>
+			// </div>
+			// </div>
+			// &lt;!&ndash;End of Events Tab&ndash;&gt;
+			// &lt;!&ndash;Beginning of Goods Tab&ndash;&gt;
+			// <div id="goodsTab" style="display:none">
+			// <p id="foodExchange" style="font-size: 16px;"><strong>Goods</strong></p>
+			// <hr id="leftSub">
+			// <ul class="nav nav-tabs">
+			// <li><a data-toggle="tab" href="#3a" >Find</a></li>
+			// <li class="active"><a data-toggle="tab" href="#3b" >Offer</a></li>
+			// </ul>
+			// <div class="tab-content">
+			// <div id="3a" class="tab-pane fade">
+			// <div class="row">
+			// <label>My Location:</label>
+			// <input><br>
+			// <label>Items:</label>
+			// <select>
+			// <option value="breakfast">Electronics and Office Supplies</option>
+			// <option value="brunch">Movie, Music, Books</option>
+			// <option value="lunch">Health and Beauty</option>
+			// <option value="soiree">Clothing, Shoe, and Jewelry</option>
+			// <option value="dinner">Cars and Autoparts</option>
+			// <option value="dinner">Other Random Items</option>
+			// </select>
+			// </div>
+			// <div class="row">
+			// <form action="">
+			// <label>Pickup Type:</label>
+			// <select>
+			// <option value="sit-down">Home</option>
+			// <option value="togo">Location</option>
+			// </select>
+			// </form>
+			// </div>
+			// <div class="row">
+			// <form action="">
+			// <label>Cost:</label>
+			// <select>
+			// <option value="free">Free</option>
+			// <option value="volunteer">Volunteer</option>
+			// <option value="0to5">$[0-50]</option>
+			// <option value="5to10">$$[51-100]</option>
+			// <option value="10plus">$$$[100+]</option>
+			// </select>
+			// <label>Delivery:</label>
+			// <input type="radio" name="yes" value="yes"> Yes
+			// <input type="radio" name="no" value="no"> No
+			// </form>
+			// </div>
+			// <div class="row">
+			// <button id="leftSubNavBarButton" type="submit" class="btn btn-submit text-center">Find</button>
+			// </div>
+			// </div>
+			// </div>
+			// <div class="tab-content">
+			// <div id="3b" class="tab-pane fade in active">
+			// <div class="row">
+			// <button id="offer3" type="submit" class="btn btn-submit text-center">Offer</button>
+			// </div>
+			// </div>
+			// </div>
+			// </div>
+			// &lt;!&ndash;End of Goods Tab&ndash;&gt;
+			// &lt;!&ndash;Beginning of Pet Services Tab&ndash;&gt;
+			// <div id="petsTab" style="display:none">
+			// <p id="foodExchange" style="font-size: 16px;"><strong>Pets</strong></p>
+			// <hr id="leftSub">
+			// <ul class="nav nav-tabs">
+			// <li><a data-toggle="tab" href="#4a" >Find</a></li>
+			// <li class="active"><a data-toggle="tab" href="#4b" >Offer</a></li>
+			// </ul>
+			// <div class="tab-content">
+			// <div id="4a" class="tab-pane fade">
+			// <div class="row">
+			// </div>
+			// <div class="row">
+			// <button id="leftSubNavBarButton4" type="submit" class="btn btn-submit text-center">Find</button>
+			// </div>
+			// </div>
+			// </div>
+			// <div class="tab-content">
+			// <div id="4b" class="tab-pane fade in active">
+			// <div class="row">
+			// <button id="offer4" type="submit" class="btn btn-submit text-center">Offer</button>
+			// </div>
+			// </div>
+			// </div>
+			// </div>
+			// &lt;!&ndash;End of Pet Services Tab&ndash;&gt;
+			// &lt;!&ndash;Beginning of Ride Share Tab&ndash;&gt;
+			// <div id="ridesTab" style="display:none">
+			// <p id="foodExchange" style="font-size: 16px;"><strong>Ride Share</strong></p>
+			// <hr id="leftSub">
+			// <ul class="nav nav-tabs">
+			// <li><a data-toggle="tab" href="#5a" >Find</a></li>
+			// <li class="active"><a data-toggle="tab" href="#5b" >Offer</a></li>
+			// </ul>
+			// <div class="tab-content">
+			// <div id="5a" class="tab-pane fade">
+			// <div class="row">
+			// </div>
+			// <div class="row">
+			// <button id="leftSubNavBarButton5" type="submit" class="btn btn-submit text-center">Find</button>
+			// </div>
+			// </div>
+			// </div>
+			// <div class="tab-content">
+			// <div id="5b" class="tab-pane fade in active">
+			// <div class="row">
+			// <button id="offer5" type="submit" class="btn btn-submit text-center">Offer</button>
+			// </div>
+			// </div>
+			// </div>
+			// </div>
+			// &lt;!&ndash;End of Ride Share Tab&ndash;&gt;
+		// End of lower left navigation bar
+		// Beginning of main feed section
+		.midFeed
+			ul(style='list-style: none;')
+				li.listPost
 					.row
-						form(action='')
-							label Dietary Preference:
-							br
-							input(type='checkbox', name='location', value='Vegan')
-							|  Vegan
-							input(type='checkbox', name='location', value='Vegetarian')
-							|  Vegetarian
-							input(type='checkbox', name='location', value='Gluten-Free')
-							|  Gluten-Free
-							br
-							input(type='checkbox', name='location', value='Paleo')
-							|  Paleo
-							input(type='checkbox', name='location', value='Organic')
-							|  Organic
-							input(type='checkbox', name='location', value='LocallyGrown')
-							|  Locally Grown
-							input(type='checkbox', name='location', value='Other')
-							|  Other
+						.alignImage.col-md-2
+							img(src='/images/meal_offered.png', style='width: 80px; height: 80px;')
+						.col-md-10
+							p.paraContainer
+								a(href='#') Meal Offered: "French Night Chez Moi"
+								br
+								|                             Date: 3-21-17 •
+								|                             Event: Soiree •
+								|                             Type: Sit-down •
+								br
+								|                             Cost: $$ •
+								|                             Accomodate Allergies? : Yes •
+								|                             Location: University
+								br
+								|                             Dietary Options: Vegetarian, Vegan, Locally Grown
+				li.listPost
 					.row
-						form(action='')
-							label Meal Location:
-							br
-							input(type='checkbox', name='location', value='University')
-							|  University
-							input(type='checkbox', name='location', value='Neighborhood')
-							|  Neighborhood
-							input(type='checkbox', name='location', value='City')
-							|  City
-							br
-							input(type='checkbox', name='location', value='Region')
-							|  Region
-							input(type='checkbox', name='location', value='State')
-							|  State
-							input(type='checkbox', name='location', value='Country')
-							|  Country
-							input(type='checkbox', name='location', value='World')
-							|  World
+						.alignImage.col-md-2
+							img(src='/images/VN_Icon.jpg', style='width: 80px; height: 80px;')
+						.col-md-10
+							p.paraContainer
+								a(href='#') Meal Offered: "French Night Chez Moi"
+								br
+								|                         Date: 3-21-17 •
+								|                         Event: Soiree •
+								|                         Type: Sit-down •
+								br
+								|                         Cost: $$ •
+								|                         Accomodate Allergies? : Yes •
+								|                         Location: University
+								br
+								|                         Dietary Options: Vegetarian, Vegan, Locally Grown
+				li.listPost
 					.row
-						button#leftSubNavBarButton.btn.btn-submit.text-center(type='submit') Find
-				#1b.tab-pane.fade.in.active
-					.row
-						label Title:
-						input(size='46')
-					.row
-						label My Location:
-						input
-						label Meal:
-						select
-							option(value='breakfast') Breakfast
-							option(value='brunch') Brunch
-							option(value='lunch') Lunch
-							option(value='soiree') Soirée
-							option(value='dinner') Dinner
-					.row
-						form(action='')
-							strong Date:
-							input(type='date', name='date')
-							label Type:
-							select
-								option(value='sit-down') Sit-down
-								option(value='togo') To-go
-					.row
-						form(action='')
-							label Cost:
-							select
-								option(value='breakfast') Free
-								option(value='brunch') Volunteer
-								option(value='lunch') $[0-5]
-								option(value='soiree') $$[5-10]
-								option(value='dinner') $$$[10+]
-							label Alergies
-							input(type='radio', name='yes', value='yes')
-							|  Yes
-							input(type='radio', name='no', value='no')
-							|  No
-					.row
-						form(action='')
-							label Dietary Options:
-							br
-							input(type='checkbox', name='location', value='Vegan')
-							|  Vegan
-							input(type='checkbox', name='location', value='Vegetarian')
-							|  Vegetarian
-							input(type='checkbox', name='location', value='Gluten-Free')
-							|  Gluten-Free
-							br
-							input(type='checkbox', name='location', value='Paleo')
-							|  Paleo
-							input(type='checkbox', name='location', value='Organic')
-							|  Organic
-							input(type='checkbox', name='location', value='LocallyGrown')
-							|  Locally Grown
-							input(type='checkbox', name='location', value='Other')
-							|  Other
-					.row
-						form(action='')
-							label Meal Location:
-							br
-							input(type='checkbox', name='location', value='University')
-							|  University
-							input(type='checkbox', name='location', value='Neighborhood')
-							|  Neighborhood
-							input(type='checkbox', name='location', value='City')
-							|  City
-							br
-							input(type='checkbox', name='location', value='Region')
-							|  Region
-							input(type='checkbox', name='location', value='State')
-							|  State
-							input(type='checkbox', name='location', value='Country')
-							|  Country
-							input(type='checkbox', name='location', value='World')
-							|  World
-					.row
-						label Description:
-						input#offerDescription
-					.row
-						button#offer.btn.btn-submit.text-center(type='submit') Offer
-		#rightNavBar.col-med-3.rightNavBar
-			img#map(src='map.png')
-		#rightSubNavBar.col-med-3.rightSubNavBar
+						.alignImage.col-md-2
+							img(src='/images/glutenFree.png', style='width: 80px; height: 80px;')
+						.col-md-10
+							p.paraContainer
+								a(href='#') Meal Offered: "French Night Chez Moi"
+								br
+								|                         Date: 3-21-17 •
+								|                         Event: Soiree •
+								|                         Type: Sit-down •
+								br
+								|                         Cost: $$ •
+								|                         Accomodate Allergies? : Yes •
+								|                         Location: University
+								br
+								|                         Dietary Options: Vegetarian, Vegan, Locally Grown
+			#searchBarContainer
+				table#searchBar(align='center')
+					tr
+						td
+							a(href='#')
+								strong <<
+						td
+							a(href='#')
+								strong < prev
+						td
+							a(href='#')
+								strong 1-3
+						td
+							a(href='#')
+								strong next >
+						td
+							a(href='#')
+								strong >>
+		// End of main feed section
+		// Beginning of top right navigation section
+		#rightNavBar.col-md-3
 			br
-			p(style='font-size: 18px;')
-				strong Notifications
+			p#profileBar
+				strong My Profile
 			hr.navLine
-		.col-med-6.navFeed
-
+			#studentInfoContainer.row
+				.col-md-5
+					img(src='/images/michelle.png', style='width: 140px; height: 140px;')
+					p Name: Michelle O.
+				#studentInfo.col-md-7
+					p Studies at: Mills College
+					p Lives in: Oakland, CA
+					p Diet: Vegetarian, Gluten-Free
+					p Allergies: None
+					p Pet Owner: 1 Dog, 2 Cats
+		// End of top right navigation section
+		#rightMap
+			#mapLocationTitle.col-md-12
+				strong My Location
+			img#map(src='/images/map.png')
+		script(src='jquery-3.1.1.min.js')
+		script(src='/bootstrap/js/bootstrap.min.js')
+		script(src='/bootstrap/js/mainJS.js', type='text/javascript')
