@@ -2,6 +2,13 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var db = mongoose.connection;
 
+var reviewSchema = new mongoose.Schema({
+    author: String,
+    rating: {type: Number, "default": 0, min: 0, max: 5},
+    reviewText: String,
+    createdOn: {type: Date, "default": Date.now}
+})
+
 var providerSchema = new Schema ({
     name: {
         type: String, 
@@ -12,14 +19,16 @@ var providerSchema = new Schema ({
     rating: {
         type: Number,
         required: true,
+        "default": 0,
         min: 0,
         max: 5},
     attributes: {
         type: String, 
         required: true},
-    distance: {
-        type: String, 
-        required: true}
+    coords: {
+        type: [Number], 
+        index: '2dsphere'},
+    reviews: [reviewSchema]
 });
 
 var loginSchema = new Schema ({
