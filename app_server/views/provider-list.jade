@@ -1,0 +1,25 @@
+extends layout_navigation
+//bring in external file containing outputRating mixin
+include _includes/sharedHTMLfunctions 
+
+block content
+  .container-fluid
+    .wrapper.mainForm2  
+      .row
+        .col-xs-12.col-sm-8
+          .row.list-group
+            each provider in providers
+              .col-xs-12.list-group-item
+                h4
+                  a(href='/provider')= provider.name
+                  small &nbsp;
+                    +outputRating (provider.rating)
+                  span.badge.pull-right.badge-default= provider.distance
+                p.address= provider.address
+                p
+                  each attribute in provider.attributes
+                    span.label.label-warning= attribute
+                    | &nbsp;
+        .col-xs-12.col-sm-4
+          p.lead= sidebar
+            

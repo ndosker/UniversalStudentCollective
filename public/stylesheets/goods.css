@@ -7,7 +7,7 @@
 
 }
 
-html, body, .container {
+html, body{
     text-transform: capitalize;
     font-style: oblique;
     text-align: left;
@@ -16,47 +16,86 @@ html, body, .container {
     background-size: cover;
     background: rgb(95, 167, 135);
 }
+a {
+    text-decoration: none;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+.first, .fourth, .fifth{
+    color: #2b4c3d;
+    text-shadow: 2px 1px #53CEBE;
+}
+.second, .third, .sixth{
+
+    color: #53CEBE;
+    text-shadow: 2px 1px #2b4c3d;
+}
+
+.container {
+    text-transform: capitalize;
+    font-style: oblique;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.allContent {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+#content{
+    width: 100%;
+}
+
+#left-side {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+#right-side {
+    float: right;
+    width: 50%;
+    height: 100%;
+}
 
 .first {
-    float: left;
-    width: 49%;
-    height: 33%;
     background: url("https://kennedyoffice.com/wp-content/uploads/2015/04/office-suppliy-banner.jpg") no-repeat;
+    background-size: 100%;
+    height: 45%;
 }
 
 .second {
-    float: left;
-    width: 49%;
-    height: 50%;
     background: url("http://s3.india.com/wp-content/uploads/2016/05/indianproducts.jpg") no-repeat;
+    background-size: 100%;
+    height: 45%;
 }
 
 
 .third {
-    float: right;
-    width: 51%;
+    background: url("http://cdn3-www.comingsoon.net/assets/uploads/1970/01/file_587384_book-adaptations-0192014-212303.jpg") no-repeat;
+    background-size: 100%;
     height: 45%;
-    background: url("http://cdn3-www.comingsoon.net/assets/uploads/1970/01/file_587384_book-adaptations-0192014-212303.jpg");
 }
 
 .fourth {
-    float: right;
-    width: 51%;
-    height: 42%;
-    background: url("http://media.salon.com/2013/08/shutterstock_64449766.jpg") ;
+    background: url("http://media.salon.com/2013/08/shutterstock_64449766.jpg") no-repeat;
+    background-size: 100%;
+    height: 45%;
 }
 
 .fifth {
-    float: left;
-    width: 49%;
-    height: 50%;
     background: url("http://midtowntire.com/images/display/506/tires-atlanta.jpg") no-repeat;
+    background-size: 100%;
+    height: 45%;
 }
-.last {
-    float: left;
-    width: 51%;
-    height: 46%;
-    background: url("http://strangenotions.com/wp-content/uploads/Dice.jpg");
+.sixth {
+    background: url("http://strangenotions.com/wp-content/uploads/Dice.jpg") no-repeat;
+    background-size: 100%;
+    height: 45%;
 }
 
 .input[type=text] {
