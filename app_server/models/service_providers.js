@@ -2,12 +2,12 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var db = mongoose.connection;
 
-var reviewSchema = new mongoose.Schema({
+var reviewSchema = new Schema ({
     author: String,
     rating: {type: Number, "default": 0, min: 0, max: 5},
     reviewText: String,
     createdOn: {type: Date, "default": Date.now}
-})
+});
 
 var providerSchema = new Schema ({
     name: {
