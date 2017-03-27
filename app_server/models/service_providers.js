@@ -31,6 +31,8 @@ var providerSchema = new Schema ({
     reviews: [reviewSchema]
 });
 
+mongoose.model('Location', locationSchema);
+
 var loginSchema = new Schema ({
     username: {
         type: String, 
