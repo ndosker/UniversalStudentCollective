@@ -21,10 +21,10 @@ router.get('/goods', ctrlServices.goods);
 router.get('/providers', ctrlServices.providers);
 
 //get events
-router.get('/events', ctrlServices.events);
+//router.get('/events', ctrlServices.events);
 
 //get myAccount
-router.get('/myAccount', ctrlServices.myAccount);
+//router.get('/myAccount', ctrlServices.myAccount);
 
 
 /* GET home page. */
