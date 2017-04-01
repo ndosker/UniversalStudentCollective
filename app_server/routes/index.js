@@ -20,6 +20,13 @@ router.get('/goods', ctrlServices.goods);
 //get providers
 router.get('/providers', ctrlServices.providers);
 
+//get events
+router.get('/events', ctrlServices.events);
+
+//get myAccount
+router.get('/myAccount', ctrlServices.myAccount);
+
+
 /* GET home page. */
 // var homepageController = function (req, res) {
 // 	res.render('index', {title: 'Express'});
