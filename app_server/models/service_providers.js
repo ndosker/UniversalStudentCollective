@@ -13,19 +13,19 @@ var reviewSchema = new Schema ({
 var findSchema = new Schema ({
     title: {
         type: String,
-        required: true}
+        required: true},
 
     category: {
         type: String,
-        required: true}
+        required: true},
 
     location: {
         type: String,
-        required: true}
+        required: true},
 
     date: {
-        type: ,
-        required: false}
+        type: String,
+        required: false},
 });
 
 var providerSchema = new Schema ({
