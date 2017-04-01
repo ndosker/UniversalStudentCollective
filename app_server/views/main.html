@@ -1,20 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Universal Student Collective</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet" type="text/css">
+    
+    <title>Universal Student Collective</title>
+    
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy" >
     <link rel="stylesheet" type="text/css" href="mainStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    //The 3 below were originally at the bottom of the doc
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="mainJS.js" type="text/javascript"></script>
 </head>
 
 <body class="bodyMain">
-
-<!--Main navigation bar begins here-->
-
+    
+<!--Beginning of Main Navigation Bar-->   
+//remove the negative margins by adding no-gutter
 <nav id="GrayMenu" class="navbar navbar-default navbar-fixed-top col-md-12">
     <div class="row container-fluid">
         <div id="uniStuCoContainer" class="col-md-3 navbar-header navbar-left ">
@@ -26,32 +34,38 @@
             <a href="#" id="uniStuCoHeader">Universal Student Collective</a>
         </div>
 
-  <!--Search field + buttons container begins here-->      
+  <!--Beginning of Search Field + Buttons Container--> 
         <div class="col-md-6">
             <span class="input-group">
-                
             <form role="search" method="get" action="" class="navbar-form navbar-left">
               <div class="form-group">
-                <!--Search field box-->  
+                  
+                <!--Search Field Box-->  
+               
                 <input id="searchBox" type="text" name="q" value="">
-                <!--Search field button-->     
+                  
+                <!--Search Field Button-->     
+                  
                 <button type="submit" class="btn btn-default">
                     <span id="searchButton" class="glyphicon glyphicon-search"></span>
                 </button>
               </div>
-              <!--Find services button-->  
+                
+              <!--Find Services Button-->  
+                
               <button id="findButton" type="submit" class="btn btn-outline-secondary text-center">
                   <span id="findButtonSpan" class="glyphicon glyphicon-globe"></span>
               </button>
-              <!--Offer services button--> 
+                
+              <!--Offer Services Button--> 
+                
               <button type="submit" class="btn btn-outline-secondary text-center">
                   <span id="offerButton" class="glyphicon glyphicon-briefcase"></span>
               </button>
             </form>
             </span>
-        </div>
-        
-    <!--Search field + buttons container ends here-->  
+        </div>   
+    <!--End of Search Field + Buttons Container-->  
         
         <div class="nav navbar-nav navbar-right centerMe">
             <div class="btn-group centerMe">
@@ -59,33 +73,30 @@
                 <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-secondary dropdown-toggle">My Account</button>
                 <div class="dropdown-menu" id="dropdownMenu">
                     <ul style="list-style: none;">
-                        <li><a href class="dropdown-item">Account</a></li>
-                        <li><a href="#" class="dropdown-item">Refer Someone</a></li>
+                        <li><a href class="dropdown-item">My Account</a></li>
+                        <li><a href="#" class="dropdown-item">Refer A Friend</a></li>
                         <li><a href="#" class="dropdown-item">Contact Us</a></li>
                         <li><a href="#" class="dropdown-item">Sign Out</a></li>
                     </ul>
-
                 </div>
             </div>
         </div>
     </div>
+    
     <div id="subNavContainer" class="row">
         <ul id="subNavList">
             <li id="eventsMenu" ><a href="#">Events</a></li>
             <li id="mealMenu"><a href="#">Meal Share</a></li>
-            <li id="goodsMenu"><a href="#">Goods</a></li>
+            <li id="goodsMenu"><a href="#">Goods Exchange</a></li>
             <li id="petsMenu"><a href="#">Pet Services</a></li>
             <li id="ridesMenu"><a href="#">Ride Share</a></li>
         </ul>
     </div>
-    </div>
-
-</nav>
-<!--End of main navigation bar-->
+<!--End of Main Navigation Bar-->
 
 
 
-<!--Beginning of lower left navigation bar-->
+<!--Beginning of Lower Left Navigation Bar-->
 <div id="leftSubNavBar" class="leftSubNavBar">
 
     <!--Beginning of Meal Tab-->
@@ -93,8 +104,13 @@
         <p id="foodExchange" style="font-size: 16px;"><strong>Meal Share</strong></p>
         <hr id="leftSub">
         <ul class="nav nav-tabs">
-            <li><a data-toggle="tab" href="#1a" >Find</a></li>
-            <li class="active"><a data-toggle="tab" href="#1b" >Offer</a></li>
+            <li>
+                <a data-toggle="tab" href="#1a" >Find</a>
+            </li>
+        
+            <li class="active">
+                <a data-toggle="tab" href="#1b" >Offer</a>
+            </li>
         </ul>
 
         <div class="tab-content">
@@ -111,31 +127,34 @@
                         <option value="dinner">Dinner</option>
                     </select>
                 </div>
+                
                 <div class="row">
                     <form action=""><strong>Date:</strong>
                         <input type="date" name="date">
                         <label>Type:</label>
                         <select>
                             <option value="sit-down">Sit-down</option>
-                            <option value="togo">To-go</option>
+                            <option value="take-out">Take-out</option>
                         </select>
                     </form>
                 </div>
+                
                 <div class="row">
                     <form action="">
                         <label>Cost:</label>
                         <select>
                             <option value="free">Free</option>
                             <option value="volunteer">Volunteer</option>
-                            <option value="0to5">$[0-5]</option>
+                            <option value="1to5">$[1-5]</option>
                             <option value="5to10">$$[5-10]</option>
                             <option value="10plus">$$$[10+]</option>
                         </select>
-                        <label>Alergies</label>
+                        <label>Allergies</label>
                         <input type="radio" name="yes" value="yes"> Yes
                         <input type="radio" name="no" value="no"> No
                     </form>
                 </div>
+                
                 <div class="row">
                     <form action="">
                         <label>Dietary Preference:</label><br>
@@ -148,6 +167,7 @@
                         <input type="checkbox" name="location" value="Other"> Other
                     </form>
                 </div>
+                
                 <div class="row">
                     <form action="">
                         <label>Meal Location:</label><br>
@@ -160,15 +180,18 @@
                         <input type="checkbox" name="location" value="World"> World
                     </form>
                 </div>
+                
                 <div class="row">
                     <button id="leftSubNavBarButton" type="submit" class="btn btn-submit text-center">Find</button>
                 </div>
+                
             </div>
             <div id="1b" class="tab-pane fade in active">
                 <div class="row">
                     <label>Title:</label>
                     <input size="46">
                 </div>
+                
                 <div class="row">
                     <label>My Location:</label>
                     <input>
@@ -183,12 +206,13 @@
                 </div>
 
                 <div class="row">
-                    <form action=""><strong>Date:</strong>
+                    <form action="">
+                        <strong>Date:</strong>
                         <input type="date" name="date">
                         <label>Type:</label>
                         <select>
                             <option value="sit-down">Sit-down</option>
-                            <option value="togo">To-go</option>
+                            <option value="take-out">Take-out</option>
                         </select>
                     </form>
                 </div>
@@ -199,7 +223,7 @@
                         <select>
                             <option value="breakfast">Free</option>
                             <option value="brunch">Volunteer</option>
-                            <option value="lunch">$[0-5]</option>
+                            <option value="lunch">$[1-5]</option>
                             <option value="soiree">$$[5-10]</option>
                             <option value="dinner">$$$[10+]</option>
                         </select>
@@ -208,6 +232,7 @@
                         <input type="radio" name="no" value="no"> No
                     </form>
                 </div>
+                
                 <div class="row">
                     <form action="">
                         <label>Dietary Options:</label><br>
@@ -220,6 +245,7 @@
                         <input type="checkbox" name="location" value="Other"> Other
                     </form>
                 </div>
+                
                 <div class="row">
                     <form action="">
                         <label>Meal Location:</label><br>
@@ -232,10 +258,12 @@
                         <input type="checkbox" name="location" value="World"> World
                     </form>
                 </div>
+                
                 <div class="row">
                     <label>Description:</label>
                     <input id="offerDescription" >
                 </div>
+                
                 <div class="row">
                     <button id="offer" type="submit" class="btn btn-submit text-center">Offer</button>
                 </div>
@@ -403,12 +431,9 @@
     <!--&lt;!&ndash;End of Ride Share Tab&ndash;&gt;-->
 
 </div>
-<!--End of lower left navigation bar-->
+<!--End of Lower Left Navigation Bar-->
 
-
-
-
-<!--Beginning of main feed section-->
+<!--Beginning of Main Feed Section-->
 <div class="midFeed">
     <ul style="list-style: none;">
         <li class="listPost">
@@ -419,7 +444,7 @@
                 <div class="col-md-10">
                     <p class="paraContainer">
                         <a href="#">Meal Offered: "French Night Chez Moi"</a><br>
-                        Date: 3-21-17 •
+                        3-21-17 •
                         Event: Soiree •
                         Type: Sit-down • <br>
                         Cost: $$ •
@@ -439,7 +464,7 @@
                 <div class="col-md-10">
                     <p class="paraContainer">
                         <a href="#">Meal Offered: "French Night Chez Moi"</a><br>
-                        Date: 3-21-17 •
+                        3-21-17 •
                         Event: Soiree •
                         Type: Sit-down • <br>
                         Cost: $$ •
@@ -459,7 +484,7 @@
                 <div class="col-md-10">
                     <p class="paraContainer">
                         <a href="#">Meal Offered: "French Night Chez Moi"</a><br>
-                        Date: 3-21-17 •
+                        3-21-17 •
                         Event: Soiree •
                         Type: Sit-down • <br>
                         Cost: $$ •
@@ -475,20 +500,29 @@
     <div id="searchBarContainer">
         <table id="searchBar" align="center">
             <tr>
-                <td><a href="#"><strong><<</strong></a></td>
-                <td><a href="#"><strong>< prev</strong></a></td>
-                <td><a href="#"><strong>1-3</strong></a></td>
-                <td><a href="#"><strong>next ></strong></a></td>
-                <td><a href="#"><strong>>></strong></a></td>
+                <td>
+                    <a href="#"><strong>&lt;&lt;</strong></a>
+                </td>
+                <td>
+                    <a href="#"><strong>prev</strong></a>
+                </td>
+                <td>
+                    <a href="#"><strong>1-3</strong></a>
+                </td>
+                <td>
+                    <a href="#"><strong>next</strong></a>
+                </td>
+                <td>
+                    <a href="#"><strong>&gt;&gt;</strong></a>
+                </td>
             </tr>
         </table>
     </div>
 
 </div>
-<!--End of main feed section-->
+<!--End of Main Feed Section-->
 
-<!--Beginning of top right navigation section-->
-
+<!--Beginning of Top Right Navigation Section-->
 <div id="rightNavBar" class="col-md-3"><br>
     <p id="profileBar"><strong>My Profile</strong></p>
     <hr class="navLine">
@@ -497,27 +531,24 @@
             <img src="michelle.png" style="width: 140px; height: 140px;">
             <p>Name: Michelle O.</p>
         </div>
+       
         <div id="studentInfo" class="col-md-7">
             <p>Studies at: Mills College</p>
             <p>Lives in: Oakland, CA</p>
-            <p>Diet: Vegetarian, Gluten-Free</p>
-            <p>Allergies: None</p>
-            <p>Pet Owner: 1 Dog, 2 Cats</p>
+            <p>Diet: Hot Cheetos</p>
+            <p>Allergies: Haters</p>
+            <p>Pet Owner: 1 Dog, 2 Cats, 1 Bird</p>
         </div>
     </div>
 </div>
-
-<!-- End of top right navigation section-->
+<!-- End of Top Right Navigation Section-->
 
 <div id="rightMap" class="">
-    <div id="mapLocationTitle" class="col-md-12"><strong>My Location</strong></div>
+    <div id="mapLocationTitle" class="col-md-12">
+        <strong>My Location</strong>
+    </div>
     <img id="map" src="map.png">
 </div>
-
-</div>
-
-<script src="jquery-3.1.1.min.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script src="mainJS.js" type="text/javascript"></script>
+    
 </body>
 </html>
