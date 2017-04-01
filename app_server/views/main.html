@@ -17,6 +17,9 @@
 <body class="bodyMain">
     
 <!--Beginning of Main Navigation Bar-->   
+    <--!
+         Team Y: Change main nav bar color scheme.
+         -->
 <nav id="GrayMenu" class="navbar navbar-default navbar-fixed-top col-md-12">
     <div class="row container-fluid">
         <div id="uniStuCoContainer" class="col-md-3 navbar-header navbar-left ">
@@ -28,12 +31,19 @@
             <a href="#" id="uniStuCoHeader">Universal Student Collective</a>
         </div>
 
+        <--!
+             Team Y: Add either text that says Find and Offer to each button, or create a pop up box that says "Find services"
+             or "Offer Services" when you hover over these. Change color to black with white text.
+             -->
+            
   <!--Beginning of Search Field + Buttons Container--> 
         <div class="col-md-6">
             <span class="input-group">
             <form role="search" method="get" action="" class="navbar-form navbar-left">
               <div class="form-group">
                   
+                  <!-- -->
+                  <!--Team Y: Extend search field to make it longer. Add a placeholder for the input.-->
                 <!--Search Field Box-->  
                
                 <input id="searchBox" type="text" name="q" value="">
@@ -88,11 +98,18 @@
     </div>
 <!--End of Main Navigation Bar-->
 
-
-
-<!--Beginning of Lower Left Navigation Bar-->
+<!-- 
+      Team Y: Change body color to light color scheme. Change left nav bar to slightly darker color/off-white. Change line-height
+        of each row so it pushes items down so there is less empty space.
+-->
+<!--Beginning of Left Navigation Bar-->
 <div id="leftSubNavBar" class="leftSubNavBar">
 
+    <!-- 
+        Team Y: Add a button so the user can add an image to the post. Add this to the schema. Also, add contact info under find
+        section so that users can contact send a message/contact the provider.
+    -->
+    
     <!--Beginning of Meal Tab-->
     <div id="mealTab">
         <p id="foodExchange" style="font-size: 16px;"><strong>Meal Share</strong></p>
@@ -427,6 +444,13 @@
 </div>
 <!--End of Lower Left Navigation Bar-->
 
+<!-- 
+    Team Y: Take specific text out. Leave only important information from schema/database info.
+        Consider taking out provider rating for sake of simplicity. Remove last two list options once for loop is implemented.
+        Also, consider adding a main feed if it simplifies the code with Angular. Consider adding a border in light gray
+        for the image. Also, change hover color to light gray color once the person hovers over the post.
+-->
+        
 <!--Beginning of Main Feed Section-->
 <div class="midFeed">
     <ul style="list-style: none;">
@@ -516,6 +540,11 @@
 </div>
 <!--End of Main Feed Section-->
 
+<!-- 
+    Team Y: Add a settings link so that the user can alter this information. Consider removing this section if the background
+    color changes to white. With a white background, it shouldn't look like it's a negative/empty space.
+-->
+        
 <!--Beginning of Top Right Navigation Section-->
 <div id="rightNavBar" class="col-md-3"><br>
     <p id="profileBar"><strong>My Profile</strong></p>
@@ -537,12 +566,18 @@
 </div>
 <!-- End of Top Right Navigation Section-->
 
+<!--
+    Team Y: Change "My Location" so that it reflects the person offering services in the main list. Click on "My Profile" and 
+    it updates "My Location." Is it possible to add numbers to reflect all locations of providers locations?
+-->
+        
 <div id="rightMap" class="">
     <div id="mapLocationTitle" class="col-md-12">
         <strong>My Location</strong>
     </div>
     <img id="map" src="map.png">
 </div>
+        
     <script src="jquery-3.1.1.min.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="mainJS.js" type="text/javascript"></script> 
