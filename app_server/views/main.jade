@@ -289,103 +289,119 @@ html(lang='en').
 		</div>
 		<!--End of Meal Tab-->
 
-		<!--&lt;!&ndash;Beginning of Events Tab&ndash;&gt;-->
 
-		<!--<div id="eventsTab" style="display:none">-->
-		<!--<p id="foodExchange" style="font-size: 16px;"><strong>Events</strong></p>-->
-		<!--<hr id="leftSub">-->
-		<!--<ul class="nav nav-tabs">-->
-		<!--<li><a data-toggle="tab" href="#2a">Find</a></li>-->
-		<!--<li class="active"><a data-toggle="tab" href="#2b">Offer</a></li>-->
-		<!--</ul>-->
 
-		<!--<div class="tab-content">-->
-		<!--<div id="2a" class="tab-pane fade">-->
-		<!--<div class="row">-->
-		<!--</div>-->
-		<!--<div class="row">-->
-		<!--<button id="leftSubNavBarButton2" type="submit" class="btn btn-submit text-center">Find</button>-->
-		<!--</div>-->
-		<!--</div>-->
-		<!--</div>-->
+		<!--Beginning of Goods Exchange Tab-->
 
-		<!--<div class="tab-content">-->
-		<!--<div id="2b" class="tab-pane fade in active">-->
-		<!--<div class="row">-->
-		<!--</div>-->
-		<!--<div class="row">-->
-		<!--<button id="offer2" type="submit" class="btn btn-submit text-center">Offer</button>-->
-		<!--</div>-->
-		<!--</div>-->
-		<!--</div>-->
-		<!--</div>-->
+		<div id="goodsTab" style="display:none">
+		   <p id="goodsExchange" style="font-size: 16px;"><strong>Goods Exchange</strong></p>
+		   <hr id="leftSub">
+		   <ul class="nav nav-tabs">
+			   <li><a data-toggle="tab" href="#2a" class="active">Find</a></li>
+			   <li><a data-toggle="tab" href="#2b">Offer</a></li>
+		   </ul>
 
-		<!--&lt;!&ndash;End of Events Tab&ndash;&gt;-->
+		   <div class="tab-content">
+			   <div class="form">
+			   <div id="2a" class="tab-pane fade in show active">
+				   <form>
+					   <br>Desired Good: <input type="text" name="Desired Good"><br>
+					   <br>Location: <input type="text" name="Location"><br>
+					   <br>I Need This Good By: <input type="date" name="Date"><br>
+					   <br><input type="submit" name="Submit">
+				   </form>
+			   </div>
+			   <div id="2b" class="tab-pane fade">
+				   <form>
+					   <br>Offered Good: <input type="text" name="Desired Good"><br>
+					   <br>Location: <input type="text" name="Location"><br>
+					   <br>I Can Provide This Good By: <input type="date" name="Date"><br>
+					   <br><input type="submit" name="Submit">
+				   </form>
+			   </div>
+			   </div>
+		   </div>
+		</div>
+		<!--End of Goods Exchange Tab-->
 
-		<!--&lt;!&ndash;Beginning of Goods Tab&ndash;&gt;-->
+		<!--Beginning of Events Tab-->
 
-		<!--<div id="goodsTab" style="display:none">-->
-		<!--<p id="foodExchange" style="font-size: 16px;"><strong>Goods</strong></p>-->
-		<!--<hr id="leftSub">-->
-		<!--<ul class="nav nav-tabs">-->
-		<!--<li><a data-toggle="tab" href="#3a" >Find</a></li>-->
-		<!--<li class="active"><a data-toggle="tab" href="#3b" >Offer</a></li>-->
-		<!--</ul>-->
+	   <div id="eventsTab" style="display:none">
+		   <p id="foodExchange" style="font-size: 16px;">
+			   <strong>Local Events</strong>
+		   </p>
+		   <hr id="leftSub">
+		   <ul class="nav nav-tabs">
 
-		<!--<div class="tab-content">-->
-		<!--<div id="3a" class="tab-pane fade">-->
-		<!--<div class="row">-->
-		<!--<label>My Location:</label>-->
-		<!--<input><br>-->
-		<!--<label>Items:</label>-->
-		<!--<select>-->
-		<!--<option value="breakfast">Electronics and Office Supplies</option>-->
-		<!--<option value="brunch">Movie, Music, Books</option>-->
-		<!--<option value="lunch">Health and Beauty</option>-->
-		<!--<option value="soiree">Clothing, Shoe, and Jewelry</option>-->
-		<!--<option value="dinner">Cars and Autoparts</option>-->
-		<!--<option value="dinner">Other Random Items</option>-->
-		<!--</select>-->
-		<!--</div>-->
-		<!--<div class="row">-->
-		<!--<form action="">-->
-		<!--<label>Pickup Type:</label>-->
-		<!--<select>-->
-		<!--<option value="sit-down">Home</option>-->
-		<!--<option value="togo">Location</option>-->
-		<!--</select>-->
-		<!--</form>-->
-		<!--</div>-->
-		<!--<div class="row">-->
-		<!--<form action="">-->
-		<!--<label>Cost:</label>-->
-		<!--<select>-->
-		<!--<option value="free">Free</option>-->
-		<!--<option value="volunteer">Volunteer</option>-->
-		<!--<option value="0to5">$[0-50]</option>-->
-		<!--<option value="5to10">$$[51-100]</option>-->
-		<!--<option value="10plus">$$$[100+]</option>-->
-		<!--</select>-->
-		<!--<label>Delivery:</label>-->
-		<!--<input type="radio" name="yes" value="yes"> Yes-->
-		<!--<input type="radio" name="no" value="no"> No-->
-		<!--</form>-->
-		<!--</div>-->
-		<!--<div class="row">-->
-		<!--<button id="leftSubNavBarButton" type="submit" class="btn btn-submit text-center">Find</button>-->
-		<!--</div>-->
-		<!--</div>-->
-		<!--</div>-->
+			   <li>
+				   <a data-toggle="tab" href="#3a">Find</a>
+			   </li>
+			   <li class="active">
+				   <a data-toggle="tab" href="#3b">Add or Promote</a>
+			   </li>
 
-		<!--<div class="tab-content">-->
-		<!--<div id="3b" class="tab-pane fade in active">-->
-		<!--<div class="row">-->
-		<!--<button id="offer3" type="submit" class="btn btn-submit text-center">Offer</button>-->
-		<!--</div>-->
-		<!--</div>-->
-		<!--</div>-->
-		<!--</div>-->
-		<!--&lt;!&ndash;End of Goods Tab&ndash;&gt;-->
+		   </ul>
+
+		   <div class="tab-content">
+			   <div id="3a" class="tab-pane fade">
+				   <div class="row">
+					   <label>Event Title:<br>
+					   </label>
+					   <input type="text" name="title">
+				   </div>
+				   <div class="row">
+					   <label>Location:<br>
+					   </label>
+					   <input type="text" name="location">
+				   </div>
+				   <div class="row">
+					   <form action>
+						   <strong>Date:</strong>
+						   <input type="date" name="date">
+					   </form>
+				   </div>
+				   <div class="row">
+					   <button id="leftSubNavBarButton2" type="submit" class="btn btn-submit text-center">Find</button>
+				   </div>
+			   </div>
+		   </div>
+
+		   <div class="tab-content">
+			   <div id="3b" class="tab-pane fade in active">
+				   <div class="row">
+					   <label>Event Title:<br>
+						   <span class="required">*</span>
+					   </label>
+					   <input type="text" name="eventtitle">
+				   </div>
+
+				   <div class="row">
+					   <label>Location:</label>
+					   <input>
+					   <form action>
+						   <strong>Venue</strong>
+						   <input type="text" name="venue">
+					   </form>
+					   <div class="row">
+						   <label>Details:</label>
+						   <input type="text" name="details">
+
+					   </div>
+					   <div class="row">
+						   <form action>
+							   <strong>Date:</strong>
+							   <input type="date" name="date">
+						   </form>
+					   </div>
+					   <button id="offer2" type="submit" class="btn btn-submit text-center">Offer</button>
+				   </div>
+			   </div>
+		   </div>
+	   </div>
+
+	   </div>
+	   <!--End of Events Tab-->
+
 
 		<!--&lt;!&ndash;Beginning of Pet Services Tab&ndash;&gt;-->
 
