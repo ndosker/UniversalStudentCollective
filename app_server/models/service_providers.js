@@ -9,6 +9,25 @@ var reviewSchema = new Schema ({
     createdOn: {type: Date, "default": Date.now}
 });
 
+//Schema for Find function (by Nell)
+var findSchema = new Schema ({
+    title: {
+        type: String,
+        required: true},
+
+    category: {
+        type: String,
+        required: true},
+
+    location: {
+        type: String,
+        required: true},
+
+    date: {
+        type: String,
+        required: false},
+});
+
 var providerSchema = new Schema ({
     name: {
         type: String, 
