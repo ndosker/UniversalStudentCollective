@@ -1,3 +1,6 @@
+.displaySide {
+    display: inline;
+}
 #uniStuCoContainer {
     padding-top: 7px;
 
@@ -94,6 +97,12 @@ div#subNavContainer.row {
     color: #ffffff;
 }
 
+#notificationsDropDown ul li a {
+    color: black;
+}
+
+#notificationsDropDown ul li :hover {
+}
 .mainFont {
     font-family: 'Satisfy', cursive;
 }
@@ -266,13 +275,15 @@ p.foodExchange {
     height: 60px;
 }
 
-#GrayMenu #dropdownMenu{
-    background-color: lightgray;
-    border-radius: 1px;
-    color: gray;
+#dropdownMenu #notificationsDropDown {
+    background-color: gray;
+    border-radius: 4px;
+    color: black;
+    padding: 7px;
 }
 
-#GrayMenu #dropdownMenu ul li a {
+
+#GrayMenu #dropdownMenu #notificationsDropDown ul li a {
     background-color: gray;
     border-radius: 0px;
     color: #000;
