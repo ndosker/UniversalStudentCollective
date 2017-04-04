@@ -2,6 +2,9 @@
 var mongoose = require( 'mongoose' );
 var gracefulShutdown;
 var dbURI = 'mongodb://localhost/UniversalStudentCollective';
+if (process.env.NODE_ENV === 'production'){
+    dbURI = process.env.MLAB_URI;
+}
 mongoose.connect(dbURI);
 
 //Monitor for successful connection through Mongoose
