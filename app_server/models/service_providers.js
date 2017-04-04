@@ -28,6 +28,8 @@ var findSchema = new Schema ({
         required: false},
 });
 
+
+
 var providerSchema = new Schema ({
     name: {
         type: String, 
@@ -51,6 +53,108 @@ var providerSchema = new Schema ({
 });
 
 mongoose.model('Provider', providerSchema);
+
+//ServiceTypeSchema
+var serviceTypeSchema = new Schema ({
+    serviceType: String
+});
+
+//Pet Services Schema
+var petSchema = new Schema ({
+    provider: {
+        type: Boolean,
+        required: true},
+    serviceTypes: [serviceTypeSchema],
+    school: String,
+    address: String,
+    sizeSmall: Boolean,
+    sizeMedium: Boolean,
+    sizeLarge: Boolean,
+    sizeGiant: Boolean,
+    sun: Boolean,
+    mon: Boolean,
+    tue: Boolean,
+    wed: Boolean,
+    thur: Boolean,
+    fri: Boolean,
+    haveCar: Boolean
+});
+
+mongoose.model('Pet', petSchema);
+
+//areaSchema
+var areaSchema = new Schema ({
+    oneMile: Boolean,
+    threeMile: Boolean,
+    fiveMile: Boolean,
+    Any: Boolean
+});
+
+//Ride Schema
+var rideSchema = new Schema ({
+    provider: {type: Boolean, required: true},
+    currentLocation: {type: String, required: true},
+    destination: String,
+    area: areaSchema
+    
+});
+
+mongoose.model('Ride', rideSchema);
+
+//Events Schema
+var eventSchema = new Schema ({
+    provider: {type: Boolean, required: true},
+    eventTitle: String,
+    Location: String,
+    date: String,
+    venue: String,
+    details: String,
+});
+
+//Diet Schema
+var dietSchema = new Schema ({
+    vegan: {type: Boolean, required: true, "default": false},
+    vegetarian: {type: Boolean, required: true, "default": false},
+    glutenFree: {type: Boolean, required: true, "default": false},
+    paleo: {type: Boolean, required: true, "default": false},
+    organic: {type: Boolean, required: true, "default": false},
+    local: {type: Boolean, required: true, "default": false},
+    other: {type: Boolean, required: true, "default": false}
+});
+
+var mealLocalSchema = new Schema ({
+    university: {type: Boolean, required: true, "default": false},
+    neighborhood: {type: Boolean, required: true, "default": false},
+    city: {type: Boolean, required: true, "default": false},
+    region: {type: Boolean, required: true, "default": false},
+    state: {type: Boolean, required: true, "default": false},
+    country: {type: Boolean, required: true, "default": false},
+    world: {type: Boolean, required: true, "default": false}
+})
+
+//Meals Schema
+var mealSchema = new Schema ({
+    provider: {type: Boolean, required: true},
+    title: String,
+    currentLocation: String,
+    meal: String,
+    eventData: {type: String, required: true},
+    sitDown: Boolean,
+    cost: String,
+    dollarSigns: {type: Number, "default": 0, min: 0, max: 3},
+    allergies: Boolean,
+    dietPreference: dietSchema,
+    mealLocal: mealLocalSchema,
+    description: String
+});
+
+//Goods Schema
+var goodsSchema = new Schema ({
+    provider: {type: Boolean, required: true},
+    good: {type: String, required: true},
+    location: {type: String, reqired: true},
+    date: String
+});
 
 // //model for our schema to use
 // mongoose.model('Profile', profileSchema);
