@@ -9,12 +9,12 @@ mongoose.connect(dbURI);
 
 //Monitor for successful connection through Mongoose
 mongoose.connection.on('connected', function() {
-    console.log('Mongoose connected to ' + dbURI);
+    console.log('Mongoose connected to da ' + dbURI);
 });
 
 //Check for connection error
 mongoose.connection.on('error', function (err) {
-    console.log('Mongoose connection error: ' + err);
+    console.log('Mongoose connection error be: ' + err);
 });
 
 //Check for disconnection event
