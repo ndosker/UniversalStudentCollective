@@ -77,6 +77,7 @@ var petSchema = new Schema ({
     wed: Boolean,
     thur: Boolean,
     fri: Boolean,
+    sat: Boolean,
     haveCar: Boolean
 });
 
@@ -105,7 +106,7 @@ mongoose.model('Ride', rideSchema);
 var eventSchema = new Schema ({
     provider: {type: Boolean, required: true},
     eventTitle: String,
-    Location: String,
+    location: String,
     date: String,
     venue: String,
     details: String,
@@ -123,7 +124,7 @@ var dietSchema = new Schema ({
 });
 
 var mealLocalSchema = new Schema ({
-    university: {type: Boolean, required: true, "default": false},
+    school: {type: Boolean, required: true, "default": false},
     neighborhood: {type: Boolean, required: true, "default": false},
     city: {type: Boolean, required: true, "default": false},
     region: {type: Boolean, required: true, "default": false},
@@ -143,6 +144,7 @@ var mealSchema = new Schema ({
     cost: String,
     dollarSigns: {type: Number, "default": 0, min: 0, max: 3},
     allergies: Boolean,
+    allergyType: String,
     dietPreference: dietSchema,
     mealLocal: mealLocalSchema,
     description: String
