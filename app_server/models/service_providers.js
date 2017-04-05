@@ -88,7 +88,7 @@ var areaSchema = new Schema ({
     oneMile: Boolean,
     threeMile: Boolean,
     fiveMile: Boolean,
-    Any: Boolean
+    any: Boolean
 });
 
 //Ride Schema
@@ -131,7 +131,7 @@ var mealLocalSchema = new Schema ({
     state: {type: Boolean, required: true, "default": false},
     country: {type: Boolean, required: true, "default": false},
     world: {type: Boolean, required: true, "default": false}
-})
+});
 
 //Meals Schema
 var mealSchema = new Schema ({
