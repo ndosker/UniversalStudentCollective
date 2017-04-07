@@ -8,3 +8,13 @@
     height: 100%;
     float: right;
 }
+.reveal-if-active{
+    opacity:0;
+    max-height:0;
+    overflow:hidden;
+}
+input[type="radio" name="allergies"] ~ .reveal-if-active{
+    opacity: 1;
+    max-height: 100%;
+    overflow: visible;
+                                       }

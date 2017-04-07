@@ -25,12 +25,35 @@ html(lang='en').
         <div class="rightForm">
             Sign Up
             <form>
-                Username:<br>
-                <input type="text" name="user"><br>
+                First Name:<br>
+                <input type="text" name="firstname"><br>
+                Last Name:<br>
+                <input type="text" name="lastname"><br>
+                Email:<br>
+                //Need to add some sort of filter to make sure only .edu emails can get through.
+                <input type="text" name="email"><br>
                 Password:<br>
                 <input type="text" name="password"><br>
-                Email Address:<br>
-                <input type="text" name="email">
+                College Name:<br>
+                <input type="text" name="college"><br>
+                City:<br>
+                <input type="text" name="city"><br>
+                Diet Restrictions:<br>
+                <input type="text" name="diet"><br>
+                Allergies:<br>
+                <input type="radio" name="allergies" value="true">Yes<br>
+                <input type="radio" name="allergies" value="false" checked>No<br>
+                <div class="reveal-if-active">
+                //Should be hidden until Yes value is checked.
+                    <input type="text" name="allergies"><br>
+                </div>
+                Pets:<br>
+                Dog(s): <input type="text" name="dog"><br>
+                Cat(s): <input type="text" name="cat"><br>
+                Other: <input type="text" name="pet"><br>
+                Ride Share Driver?<br>
+                <input type="radio" name="driver" value="true" checked>Yes<br>
+                <input type="radio" name="driver" value="false">No
             </form>
         </div>
     </body>
