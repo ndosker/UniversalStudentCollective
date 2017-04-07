@@ -1,11 +1,12 @@
 /* GET 'home' page */
 module.exports.login = function(req, res) {
-	res.render('index', {title: 'Login info'});
+	res.render('login', {title: 'Login info'});
 };
 
 /* GET 'Location info' page */
 module.exports.main = function(req, res) {
 	res.render('main', {title: 'Main'});
+	console.log('This was rendered from controllers/services.js');
 };
 
 /* GET Pet form page */
