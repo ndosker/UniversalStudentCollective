@@ -1,0 +1,10 @@
+.leftForm {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.rightForm {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
