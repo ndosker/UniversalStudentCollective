@@ -56,6 +56,7 @@ process.on('SIGTERM', function () {
     });
 });
 
+// BRING IN SCHEMAS & MODELS
 require('./service_providers');
     
     

@@ -6,7 +6,6 @@ module.exports.login = function(req, res) {
 /* GET 'Location info' page */
 module.exports.main = function(req, res) {
 	res.render('main', {title: 'Main'});
-	console.log('This was rendered from controllers/services.js');
 };
 
 /* GET Pet form page */
