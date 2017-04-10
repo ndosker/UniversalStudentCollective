@@ -1,12 +1,15 @@
 //Require mongoose
 var mongoose = require( 'mongoose' );
 var gracefulShutdown;
-var dbURI = 'mongodb://localhost/UniversalStudentCollective';
+var dbURI = 'mongodb://localhost/usc';
+if (process.env.NODE_ENV === 'production'){
+    dbURI = process.env.MLAB_URI;
+}
 mongoose.connect(dbURI);
 
 //Monitor for successful connection through Mongoose
 mongoose.connection.on('connected', function() {
-    console.log('Mongoose connected to da ' + dbURI);
+    console.log('Mongoose connected to the ' + dbURI + ' database');
 });
 
 //Check for connection error
@@ -23,7 +26,7 @@ mongoose.connection.on('disconnected', function() {
 gracefulShutdown = function (msg, callback) {
     //close mongoose connection, pass through an anonymous function to run when closed
     mongoose.connection.close(function () {
-        console.log('Mongoose disconnected through ' + msg);  // output message and callback when Mongoose connection is closed
+        console.log('Mongoose disconnected and said: ' + msg);  // output message and callback when Mongoose connection is closed
         callback();
     
     });
@@ -53,6 +56,7 @@ process.on('SIGTERM', function () {
     });
 });
 
+// BRING IN SCHEMAS & MODELS
 require('./service_providers');
     
     

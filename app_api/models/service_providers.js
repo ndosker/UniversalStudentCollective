@@ -2,12 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var db = mongoose.connection;
 
-var reviewSchema = new Schema ({
-    author: String,
-    rating: {type: Number, "default": 0, min: 0, max: 5},
-    reviewText: String,
-    createdOn: {type: Date, "default": Date.now}
-});
+
 
 //Schema for Find function (by Nell)
 var findSchema = new Schema ({
@@ -28,27 +23,29 @@ var findSchema = new Schema ({
         required: false},
 });
 
-
+var reviewSchema = new Schema ({
+    author: String,
+    rating: {type: Number, "default": 0, min: 0, max: 5},
+    reviewText: String,
+    createdOn: {type: Date, "default": Date.now}
+});
 
 var providerSchema = new Schema ({
     name: {
         type: String, 
         required: true},
-    address: {
-        type: String, 
-        required: true},
+    address: String,
     rating: {
         type: Number,
-        required: true,
         "default": 0,
         min: 0,
         max: 5},
-    attributes: {
-        type: String, 
-        required: true},
+    attributes: String, 
     coords: {
         type: [Number], 
-        index: '2dsphere'},
+        index: '2dsphere',
+        required: true
+    },
     reviews: [reviewSchema]
 });
 
