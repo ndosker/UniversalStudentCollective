@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var ctrlPets = require('../controllers/pets');
 var ctrlProviders = require('../controllers/providers');
+var ctrlReviews = require('../controllers/reviews');
 
 //pets
 router.get('/pets', ctrlPets.petsListByDistance);
@@ -16,5 +17,11 @@ router.post('/providers', ctrlProviders.providersCreate);
 router.get('/providers/:providerid', ctrlProviders.providersReadOne);
 router.put('/providers/:providerid', ctrlProviders.providersUpdateOne);
 router.delete('/providers/:providerid', ctrlProviders.providersDeleteOne);
+
+//reviews
+router.post('/providers/:providerid/reviews', ctrlReviews.reviewsCreate);
+router.get('/providers/:providerid/reviews/:reviewid', ctrlReviews.reviewsReadOne);
+router.put('/providers/:providerid/reviews/:reviewid', ctrlReviews.reviewsUpdateOne);
+router.delete('/providers/:providerid/reviews/:reviewid', ctrlReviews.reviewsDeleteOne);
 
 module.exports = router;
