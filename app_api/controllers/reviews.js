@@ -85,7 +85,8 @@ var doSetAverageRating = function(provider) {
   }
 };
 
-
+/* GET a review, need providerid and reviewid */
+/* /api/providers/:providerid/reviews/:reviewid */
 module.exports.reviewsReadOne = function (req, res) { 
     console.log("Pulling up single review");
      if (req.params && req.params.providerid && req.params.reviewid) { //look for providerid and reviewid parameters in the request.
@@ -135,6 +136,8 @@ module.exports.reviewsReadOne = function (req, res) {
      }
 };
      
+/*PUT method on a review, need providerid and reviewid 
+ /api/providers/:providerid/reviews/:reviewid */
 module.exports.reviewsUpdateOne = function (req, res) {
      sendJsonResponse(res, 200, {"status" : "success"});
 };

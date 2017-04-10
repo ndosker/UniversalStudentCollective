@@ -72,6 +72,7 @@ var buildProviderList = function(req, res, results, stats) {
   return providers;
 };
 
+//POST method on providers, requires are in providerSchema
 module.exports.providersCreate = function (req, res) {
     Prov.create({
         name: req.body.name,
@@ -88,7 +89,8 @@ module.exports.providersCreate = function (req, res) {
 };
 
 
-//Read and return a single provider
+//Read and return a single provider, requires provideid parameter
+// /api/provider/:providerid
 module.exports.providersReadOne = function (req, res) {
     if (req.params && req.params.providerid) {  //check for providerid in the request parameter
         Prov
@@ -112,8 +114,42 @@ module.exports.providersReadOne = function (req, res) {
     }
 };
 
+//PUT method on providers, requires providerid parameter
+
 module.exports.providersUpdateOne = function (req, res) {
-     sendJsonResponse(res, 200, {"status" : "success"});
+     if (!req.params.providerid) {
+         sendJsonResponse(res, 404, {
+             "message": "Not found, providerid is required"
+         });
+         return;
+     }
+    Prov
+        .findById(req.params.providerid)
+        .select('-reviews -rating')
+        .exec(
+            function(err, provider) {
+                if (!provider) {
+                    sendJsonResponse(res, 404, {
+                        "message": "Provider with that providerid not found"
+                    });
+                    return;
+                } else if (err) {
+                    sendJsonResponse(res, 404, err);
+                    return;
+                }
+                provider.name = req.body.name;
+                provider.address = req.body.address;
+                provider.attributes = req.body.attributes.split(",");
+                provider.coords = [parseFloat(req.body.lng),parseFloat(req.body.lat)];
+                provider.save(function(err, provider) {
+                    if (err) {
+                        sendJsonResponse(res, 404, err);
+                    } else {
+                        sendJsonResponse(res, 200, provider);
+                    }
+                });
+            }
+    );
 };
 
 module.exports.providersDeleteOne = function (req, res) {
