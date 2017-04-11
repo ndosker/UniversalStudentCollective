@@ -139,7 +139,53 @@ module.exports.reviewsReadOne = function (req, res) {
 /*PUT method on a review, need providerid and reviewid 
  /api/providers/:providerid/reviews/:reviewid */
 module.exports.reviewsUpdateOne = function (req, res) {
-     sendJsonResponse(res, 200, {"status" : "success"});
+     if (!req.params.providerid || !req.params.reviewid) {
+         sendJsonResponse(res, 404, {
+             "message": "Not found, providerid and reviewid are both required"
+         });
+         return;
+     }
+     Prov
+        .findById(req.params.providerid) //find parent document
+        .select('reviews')
+        .exec(
+            function(err, provider) {
+                var thisReview;
+                if (!provider) {
+                    sendJsonResponse(res, 404, {
+                        "message": "providerid not found"
+                    });
+                    return;
+                } else if (err) {
+                    sendJsonResponse(res, 400, err);
+                    return;
+                }
+                if(provider.reviews && provider.reviews.length > 0) {
+                    thisReview = provider.reviews.id(req.params.reviewid); //find subdocument
+                    if (!thisReview){
+                        sendJsonResponse(res, 404, {
+                            "message": "reviewid not found"
+                        });
+                    } else {
+                        thisReview.author = req.body.author;
+                        thisReview.rating = req.body.rating;
+                        thisReview.reviewText = req.body.reviewText;
+                        provider.save(function (err, provider){
+                            if (err) {
+                                sendJsonResponse(res, 404, err);
+                            } else {
+                                updateAverageRating(provider._id);
+                                sendJsonResponse(res, 200, thisReview);
+                            }
+                        });
+                    }
+                } else {
+                    sendJsonResponse(res, 404, {
+                        "message": "No review to update"
+                    });
+                }
+            }
+        );
 };
 
 module.exports.reviewsDeleteOne = function (req, res) {
