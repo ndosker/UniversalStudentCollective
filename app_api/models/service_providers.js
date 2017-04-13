@@ -101,13 +101,15 @@ mongoose.model('Ride', rideSchema);
 
 //Events Schema
 var eventSchema = new Schema ({
-    provider: {type: Boolean, required: true},
+    provider: String, 
     eventTitle: String,
     location: String,
     date: String,
     venue: String,
-    details: String,
+    details: String
 });
+
+mongoose.model('Events', eventSchema); 
 
 //Diet Schema
 var dietSchema = new Schema ({
