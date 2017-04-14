@@ -1,111 +1,71 @@
-doctype html
 html
   head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+    title Universal Student Collective
+    link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Satisfy')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/mainStyle.css')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/loginCSS.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
   body
-    html(lang='en')
-      meta(charset='UTF-8')
-      |     
-      meta(name='viewport', content='width=device-width,initial-scale=1')
-      |     
-      title Universal Student Collective
-      |     
-      link(rel='stylesheet', type='text/css', href='https://fonts.googleapis.com/css?family=Satisfy')
-      |     
-      link(rel='stylesheet', type='text/css', href='/stylesheets/mainStyle.css')
-      |     
-      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
-      |     
-      link(rel='stylesheet', type='text/css', href='/stylesheets/loginCSS.css')
-      |
-      script(src='/javascripts/login.js')
-      |     
-      script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-      |     
-      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
-      .main
-        #topBar
-          p#uscHeader Universal Student Collective
-          |         
-          form#loginForm
-            input#userNameInput(type='text', name='user', placeholder='User name')
-            |             
-            input#passwordInput(type='password', name='password', placeholder='Password')
-            |             
-            button.btn.btn-secondary(type='button') Log In
-        |     
-        .mainContainer
-          .leftForm
-            img(src='https://static.pexels.com/photos/207569/pexels-photo-207569.jpeg')
-            |           
-            p
-              | Want to connect more with your fellow students? Join the Universal Student Collective!
-              | Share your talents to gain reputation among your peers, and get access to reliable members of your community. Find and offer services such as:
+    .main
+      #topBar
+        p#uscHeader Universal Student Collective
+        form#loginForm
+          input#userNameInput(type='text', name='user', placeholder='User name')
+          input#passwordInput(type='password', name='password', placeholder='Password')
+          button.btn.btn-secondary(type='button') Log In
+      .mainContainer
+        .leftForm
+          img(src='https://static.pexels.com/photos/207569/pexels-photo-207569.jpeg')
+          p
+            | Want to connect more with your fellow students? Join the Universal Student Collective!
+            | Share your talents to gain reputation among your peers, and get access to reliable members of your community. Find and offer services such as:
             ul
               li Goods Exchange
-              |             
               li Ride Share
-              |             
               li Pet Care
-              |             
               li Meal Sharing
-            |           
-            p And much more! Join today to enhance your college experience.
-          |         
-          .rightForm
-            p#pSignUp Sign Up
-            |             
-            form
-              .row
-                input(size='35', type='text', name='firstname', placeholder='First name')
-                |                     
-                input(size='35', type='text', name='lastname', placeholder='Last name')
-                br
-              // Need to add some sort of filter to make sure only .edu emails can get through.
-              .row
-                input(size='35', type='text', name='email', placeholder='E-mail')
-                |                     
-                input(size='35', type='text', name='college', placeholder='College name')
-              |                 
-              .row
-                input(size='35', type='text', name='city', placeholder='My Location (City, State, Country)')
-                |                     
-                input(size='35', type='text', name='diet', placeholder='Diet Restrictions')
-                |                     
-                br
-              |                 
-              .row
-                strong
-                input(size='8', type='text', name='dog', placeholder='# of dogs')
-                |                     
-                strong
-                input(size='8', type='text', name='cat', placeholder='# of cats')
-                |                     
-                strong
-                input(size='41', type='text', name='pet', placeholder='Other pets')
-                |                     
-                strong
-                input(size='9', type='text', name='pet', placeholder='# of others')
-              |                 
-              .row
-                #allergiesContainer
-                  strong Allergies:
-                  |                         
-                  input(type='radio', name='allergies', onclick='show();', value='true')
-                  strong Yes
-                  |                         
-                  input(type='radio', name='allergies', onclick='hide();', value='false', checked='')
-                  strong No
-                |                     
-                #ridesContainer
-                  strong Ride Share Driver?
-                  |                         
-                  input(type='radio', name='driver', value='true', checked='')
-                  | Yes
-                  |                         
-                  input(type='radio', name='driver', value='false')
-                  | No
-                |                           
-                input#ifYes(type='text', name='allergies-list', style='display:none', placeholder='My Allergies')
-              |                 
+          p And much more! Join today to enhance your college experience.
+        .rightForm
+          p#pSignUp Sign Up
+          form
+            .row
+              input(size='35', type='text', name='firstname', placeholder='First name')
+              input(size='35', type='text', name='lastname', placeholder='Last name')
               br
-              button#createAccountButton.btn.btn-secondary(type='button') Create an Account
+            // Need to add some sort of filter to make sure only .edu emails can get through.
+            .row
+              input(size='35', type='text', name='email', placeholder='E-mail')
+              input(size='35', type='text', name='college', placeholder='College name')
+            .row
+              input(size='35', type='text', name='city', placeholder='My Location (City, State, Country)')
+              input(size='35', type='text', name='diet', placeholder='Diet Restrictions')
+              br
+            .row
+              strong
+              input(size='8', type='text', name='dog', placeholder='# of dogs')
+              strong
+              input(size='8', type='text', name='cat', placeholder='# of cats')
+              strong
+              input(size='41', type='text', name='pet', placeholder='Other pets')
+              strong
+              input(size='9', type='text', name='pet', placeholder='# of others')
+            .row
+              #allergiesContainer
+                strong Allergies:
+                input(type='radio', name='allergies', onclick='show();', value='true')
+                strong Yes
+                input(type='radio', name='allergies', onclick='hide();', value='false', checked='')
+                strong No
+              #ridesContainer
+                strong Ride Share Driver?
+                input(type='radio', name='driver', value='true', checked='')
+                | Yes
+                input(type='radio', name='driver', value='false')
+                | No
+              input#ifYes(type='text', name='allergies-list', style='display:none', placeholder='My Allergies')
+            br
+            button#createAccountButton.btn.btn-secondary(type='button') Create an Account
