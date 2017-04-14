@@ -51,6 +51,34 @@ var providerSchema = new Schema ({
 
 mongoose.model('Provider', providerSchema);
 
+//ServiceTypeSchema
+var serviceTypeSchema = new Schema ({
+    serviceType: String
+});
+
+//Pet Services Schema
+var petSchema = new Schema ({
+    provider: {
+        type: Boolean,
+        required: true},
+    serviceTypes: [serviceTypeSchema],
+    school: String,
+    address: String,
+    sizeSmall: Boolean,
+    sizeMedium: Boolean,
+    sizeLarge: Boolean,
+    sizeGiant: Boolean,
+    sun: Boolean,
+    mon: Boolean,
+    tue: Boolean,
+    wed: Boolean,
+    thur: Boolean,
+    fri: Boolean,
+    sat: Boolean,
+    haveCar: Boolean
+});
+
+mongoose.model('Pet', petSchema);
 
 //areaSchema
 var areaSchema = new Schema ({
@@ -204,6 +232,60 @@ var goodsSchema = new Schema ({
 //         type: String, 
 //         required: true}
 // });
+
+
+// mongoose.model('User', userSchema);
+
+// var mongoose = require('mongoose');
+// var Schema = mongoose.Schema;
+// var db = mongoose.connection;
+
+// var userSchema = new Schema ({
+//     firstName: { 
+//         type: String, 
+//         required: true
+//         max:100},
+//     middleName: {
+//         type: String
+//         max:100},
+//     lastName: {
+//         type: String, 
+//         required: true
+//         max:100},
+//     email: {
+//         type: String, 
+//         required: true},
+//     passwordHash: {
+//         type: String},
+//     passwordSalt: {
+//         type: String}
+// });
+
+
+// mongoose.model('Location', locationSchema);
+
+// var mongoose = require('mongoose');
+// var Schema = mongoose.Schema;
+// var db = mongoose.connection;
+
+// var locationSchema = new Schema ({
+//     streetNum: { 
+//         type: [Number], 
+//         required: true},
+//     streetName: {
+//         type: String,
+//         required: true},
+//     city: {
+//         type: String, 
+//         required: true},
+//     state: {
+//         type: String, 
+//         required: true},
+//     zipCode: {
+//         type: [Number], 
+//         required: true}
+// });
+
 
 // mongoose.model('Search', searchSchema);
 
