@@ -3,7 +3,7 @@ var router = express.Router();
 var ctrlPets = require('../controllers/pets');
 var ctrlProviders = require('../controllers/providers');
 var ctrlReviews = require('../controllers/reviews');
-var ctrlEvents = require('../controllers/events');
+//var ctrlEvents = require('../controllers/events');
 
 //pets
 router.get('/pets', ctrlPets.petsListByDistance);
@@ -14,11 +14,11 @@ router.delete('/pets/:petid', ctrlPets.petsDeleteOne);
 
 
 //events
-router.get('/events', ctrlEvents.eventsListByDistance);
-router.post('/events', ctrlEvents.eventsCreate);
-router.get('/events/:eventid', ctrlEvents.eventsReadOne);
-router.put('/events/:eventid', ctrlEvents.eventsUpdateOne);
-router.delete('/events/:eventid', ctrlEvents.eventsDeleteOne);
+//router.get('/events', ctrlEvents.eventsListByDistance);
+//router.post('/events', ctrlEvents.eventsCreate);
+//router.get('/events/:eventid', ctrlEvents.eventsReadOne);
+//router.put('/events/:eventid', ctrlEvents.eventsUpdateOne);
+//router.delete('/events/:eventid', ctrlEvents.eventsDeleteOne);
 
 
 //providers
