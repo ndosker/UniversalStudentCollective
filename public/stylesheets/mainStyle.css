@@ -195,10 +195,12 @@ hr {
 .leftSubNavBar {
     border-radius: 5px;
     background-color:whitesmoke;
-    width:400px;
-    height: 665px;
-    margin-left: 40px;
-    margin-top: 112px;
+    min-width:20%;
+    max-width: 30%;
+    min-height: 20%;
+    max-height: 40%;
+    margin-left: 1%;
+    margin-top: 8.25%;
     font-family: Garamond;
     text-align: center;
     opacity: .85;
@@ -303,7 +305,7 @@ p.foodExchange {
     width: 33%;
     height: 100%;
     position: absolute;
-    right:33.5%;
+    right:34%;
     top:17.5%;
     font-family: Garamond;
     text-align: center;
