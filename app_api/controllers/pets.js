@@ -75,13 +75,11 @@ module.exports.petsDeleteOne = function (req, res) {
                         sendJsonResponse(res, 404, err);
                         return;
                     }
-                    sendJsonResponse(res, 204, null);
+                    sendJsonResponse(res, 204, petid);
                 });
      } else {
          sendJsonResponse(res, 404, {
              "message": "No petid"
          });
      }
-    
-    
 };
