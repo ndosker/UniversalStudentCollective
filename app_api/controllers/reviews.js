@@ -8,7 +8,8 @@ var sendJsonResponse = function(res, status, content) {
 
 /* POST a new review, need providerid */
 /* /api/providers/:providerid/reviews */
-module.exports.reviewsCreate = function (req, res) {
+module.exports.reviewsCreate = function(req, res) {
+    console.log("accessing reviewsCreate POST method")
      var providerid = req.params.providerid;
      if (providerid) {
          Prov
@@ -34,6 +35,7 @@ var doAddReview = function(req, res, provider) {
   if (!provider) {
     sendJsonResponse(res, 404, "providerid not found");
   } else {
+    console.log("providerid found")
     provider.reviews.push({
       author: req.body.author,
       rating: req.body.rating,
@@ -139,6 +141,7 @@ module.exports.reviewsReadOne = function (req, res) {
 /*PUT method on a review, need providerid and reviewid 
  /api/providers/:providerid/reviews/:reviewid */
 module.exports.reviewsUpdateOne = function (req, res) {
+    console.log("accessing reviewsUpdateOne function PUT method")
      if (!req.params.providerid || !req.params.reviewid) {
          sendJsonResponse(res, 404, {
              "message": "Not found, providerid and reviewid are both required"
@@ -167,15 +170,20 @@ module.exports.reviewsUpdateOne = function (req, res) {
                             "message": "reviewid not found"
                         });
                     } else {
+                        console.log("found subdocument" + req.params.reviewid)
                         thisReview.author = req.body.author;
                         thisReview.rating = req.body.rating;
                         thisReview.reviewText = req.body.reviewText;
                         provider.save(function (err, provider){
                             if (err) {
-                                sendJsonResponse(res, 404, err);
+                                sendJsonResponse(res, 404, {
+                                    "message": "provider.save error"
+                                });
                             } else {
                                 updateAverageRating(provider._id);
-                                sendJsonResponse(res, 200, thisReview);
+                                sendJsonResponse(res, 200, {
+                                    "message": "saved to db" + thisReview
+                                    });
                             }
                         });
                     }
