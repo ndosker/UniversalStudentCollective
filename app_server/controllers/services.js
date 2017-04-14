@@ -1,6 +1,6 @@
 /* GET 'home' page */
 module.exports.login = function(req, res) {
-	res.render('login', {title: 'Login info'});
+	res.render('login-signup', {title: 'Login info'});
 };
 
 /* GET 'Location info' page */
