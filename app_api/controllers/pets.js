@@ -11,7 +11,29 @@ module.exports.petsListByDistance = function (req, res) {
 };
 
 module.exports.petsCreate = function (req, res) {
-     sendJsonResponse(res, 200, {"status" : "success"});
+    Pet.create({
+        provider: req.body.provider,
+        //serviceTypes: req.body.serviceTypes.split(","),
+        school: req.body.school,
+        address: req.body.address,
+        sizeSmall: req.body.sizeSmall,
+        sizeMedium: req.body.sizeMedium,
+        sizeGiant: req.body.sizeGiant,
+        sun: req.body.sun,
+        mon: req.body.mon,
+        tue: req.body.tue,
+        wed: req.body.wed,
+        thur: req.body.thur,
+        fri: req.body.fri,
+        sat: req.body.sat,
+        haveCar: req.body.haveCar
+        }, function(err, provider) {
+        if (err) {
+            sendJsonResponse(res, 400, err);
+        } else {
+            sendJsonResponse(res, 201, provider);
+        }
+        });
 };
 
 module.exports.petsReadOne = function (req, res) {

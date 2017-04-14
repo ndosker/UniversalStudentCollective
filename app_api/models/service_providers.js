@@ -51,17 +51,13 @@ var providerSchema = new Schema ({
 
 mongoose.model('Provider', providerSchema);
 
-//ServiceTypeSchema
-var serviceTypeSchema = new Schema ({
-    serviceType: String
-});
 
 //Pet Services Schema
 var petSchema = new Schema ({
     provider: {
         type: Boolean,
         required: true},
-    serviceTypes: [serviceTypeSchema],
+    serviceTypes: String,
     school: String,
     address: String,
     sizeSmall: Boolean,
