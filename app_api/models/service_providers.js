@@ -52,16 +52,16 @@ var providerSchema = new Schema ({
 mongoose.model('Provider', providerSchema);
 
 //ServiceTypeSchema
-var serviceTypeSchema = new Schema ({
-    serviceType: String
-});
+//var serviceTypeSchema = new Schema ({
+    //serviceType: String
+//});
 
 //Pet Services Schema
 var petSchema = new Schema ({
     provider: {
         type: Boolean,
         required: true},
-    serviceTypes: [serviceTypeSchema],
+    serviceTypes: String,
     school: String,
     address: String,
     sizeSmall: Boolean,
@@ -75,7 +75,12 @@ var petSchema = new Schema ({
     thur: Boolean,
     fri: Boolean,
     sat: Boolean,
-    haveCar: Boolean
+    haveCar: Boolean,
+    coords: {
+        type: [Number], 
+        index: '2dsphere',
+        required: false
+    }
 });
 
 mongoose.model('Pet', petSchema);

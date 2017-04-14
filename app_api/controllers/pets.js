@@ -33,7 +33,7 @@ module.exports.petsListByDistance = function (req, res) {
    };
    var geoOptions = {                       //options object incluing max distance set to maxDistance in miles and result list limited to 10
        spherical: true,
-       maxDistance: theEarth.getRadsFromDistance(20),
+       maxDistance: theEarth.getRadsFromDistance(maxDistance),
        num: 10
    };
     if (!lng || !lat || !maxDistance) {
@@ -123,7 +123,8 @@ module.exports.petsCreate = function (req, res) {
        thur: req.body.thur,
        fri: req.body.fri,
        sat: req.body.sat,
-       haveCar: req.body.haveCar
+       haveCar: req.body.haveCar,
+       coords: [parseFloat(req.body.lng), parseFloat(req.body.lat)]
     }, function(err, provider) {
         if (err) {
             sendJsonResponse(res, 400, err);
