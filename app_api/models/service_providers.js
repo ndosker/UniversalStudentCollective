@@ -52,16 +52,17 @@ var providerSchema = new Schema ({
 mongoose.model('Provider', providerSchema);
 
 //ServiceTypeSchema
-var serviceTypeSchema = new Schema ({
-    serviceType: String
-});
+// var serviceTypeSchema = new Schema ({
+//     serviceType: String
+// });
 
 //Pet Services Schema
 var petSchema = new Schema ({
     provider: {
         type: Boolean,
         required: true},
-    serviceTypes: [serviceTypeSchema],
+   // serviceTypes: [serviceTypeSchema],
+   serviceTypes: String,
     school: String,
     address: String,
     sizeSmall: Boolean,
@@ -157,6 +158,53 @@ var goodsSchema = new Schema ({
     date: String
 });
 
+//User Schema
+// var usersSchema = new Schema ({
+//     firstName: { 
+//         type: String, 
+//         required: true},
+//     middleName: {
+//         type: String},
+//     lastName: {
+//         type: String, 
+//         required: true},
+//     email: {
+//         type: String, 
+//         required: true},
+//     passwordHash: {
+//         type: String},
+//     passwordSalt: {
+//         type: String}
+// });
+
+// mongoose.model('Users', userSchema);
+
+
+// mongoose.model('Location', locationSchema);
+
+// var mongoose = require('mongoose');
+// var Schema = mongoose.Schema;
+// var db = mongoose.connection;
+
+// var locationSchema = new Schema ({
+//     streetNum: { 
+//         type: [Number], 
+//         required: true},
+//     streetName: {
+//         type: String,
+//         required: true},
+//     city: {
+//         type: String, 
+//         required: true},
+//     state: {
+//         type: String, 
+//         required: true},
+//     zipCode: {
+//         type: [Number], 
+//         required: true}
+// });
+
+
 // //model for our schema to use
 // mongoose.model('Profile', profileSchema);
 
@@ -234,57 +282,6 @@ var goodsSchema = new Schema ({
 // });
 
 
-// mongoose.model('User', userSchema);
-
-// var mongoose = require('mongoose');
-// var Schema = mongoose.Schema;
-// var db = mongoose.connection;
-
-// var userSchema = new Schema ({
-//     firstName: { 
-//         type: String, 
-//         required: true
-//         max:100},
-//     middleName: {
-//         type: String
-//         max:100},
-//     lastName: {
-//         type: String, 
-//         required: true
-//         max:100},
-//     email: {
-//         type: String, 
-//         required: true},
-//     passwordHash: {
-//         type: String},
-//     passwordSalt: {
-//         type: String}
-// });
-
-
-// mongoose.model('Location', locationSchema);
-
-// var mongoose = require('mongoose');
-// var Schema = mongoose.Schema;
-// var db = mongoose.connection;
-
-// var locationSchema = new Schema ({
-//     streetNum: { 
-//         type: [Number], 
-//         required: true},
-//     streetName: {
-//         type: String,
-//         required: true},
-//     city: {
-//         type: String, 
-//         required: true},
-//     state: {
-//         type: String, 
-//         required: true},
-//     zipCode: {
-//         type: [Number], 
-//         required: true}
-// });
 
 
 // mongoose.model('Search', searchSchema);
