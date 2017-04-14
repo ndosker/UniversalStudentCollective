@@ -60,48 +60,48 @@ module.exports.petsReadOne = function (req, res) {
 };
      
 module.exports.petsUpdateOne = function (req, res) {
-     if (!req.params.petid) {
-          sendJsonResponse(res, 404, {
-               "message": "Not found, petid is required"
-          });
-          return;
-     }
-     Pet
-          .findByID(req.params.petid)
-          .select('')
-          .exec(
-               function(err, pet){
-                    if(!pet){
-                         sendJsonResponse(res, 404, {
-                              "message": "Pet with that petid not found"
-                         });
-                         return;
-                    } else if (err){
-                         sendJsonResponse(res, 404, err);
-                         return;
-                    }
-                    pet.school = req.body.school;
-                    pet.address = req.body.address;
-                    pet.sizeSmall = req.body.sizeSmall;
-                    pet.sizeMedium = req.body.sizeMedium;
-                    pet.sizeLarge = req.body.sizeLarge;
-                    pet.sizeGiant = req.body.sizeLarge;
-                    pet.sun = req.body.sun;
-                    pet.mon = req.body.mon;
-                    pet.tue = req.body.tue;
-                    pet.wed = req.body.wed;
-                    pet.thu = req.body.thu;
-                    pet.fri = req.body.fri;
-                    pet.sat = req.body.sat;
-                    pet.haveCar = req.body.haveCar;
-                    pet.save(function(err, pet) {
-                         if (err) {
-                              sendJsonResponse(res, 404, err);
-                         } else {
-                              sendJsonResponse(res, 200, pet);
-                         }
-                    })
-          })
+     //if (!req.params.petid) {
+          //sendJsonResponse(res, 404, {
+               //"message": "Not found, petid is required"
+          //});
+          //return;
+     //}
+     //Pet
+          //.findByID(req.params.petid)
+          //.select('')
+          //.exec(
+               //function(err, pet){
+                    //if(!pet){
+                         //sendJsonResponse(res, 404, {
+                              //"message": "Pet with that petid not found"
+                         //});
+                         //return;
+                    //} else if (err){
+                         //sendJsonResponse(res, 404, err);
+                         //return;
+                    //}
+                    //pet.school = req.body.school;
+                    //pet.address = req.body.address;
+                    //pet.sizeSmall = req.body.sizeSmall;
+                    //pet.sizeMedium = req.body.sizeMedium;
+                    //pet.sizeLarge = req.body.sizeLarge;
+                    //pet.sizeGiant = req.body.sizeLarge;
+                    //pet.sun = req.body.sun;
+                    //pet.mon = req.body.mon;
+                    //pet.tue = req.body.tue;
+                    //pet.wed = req.body.wed;
+                    //pet.thu = req.body.thu;
+                    //pet.fri = req.body.fri;
+                    //pet.sat = req.body.sat;
+                    //pet.haveCar = req.body.haveCar;
+                    //pet.save(function(err, pet) {
+                         //if (err) {
+                              //sendJsonResponse(res, 404, err);
+                         //} else {
+                              //sendJsonResponse(res, 200, pet);
+                         //}
+                    //})
+          //})
      sendJsonResponse(res, 200, {"status" : "success"});
 };
 
