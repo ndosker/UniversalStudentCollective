@@ -7,7 +7,7 @@ var sendJsonResponse = function(res, status, content) {
 };
 
 var theEarth = (function(){
-    var earthRadius = 3959; //Define fixed value for earth's radius in miles (km is 6371)
+    var earthRadius = 6371; //Define fixed value for earth's radius in km (miles is 3959)
     
     var getDistanceFromRads = function(rads) {  //radians to distance
         return parseFloat(rads * earthRadius);
@@ -23,6 +23,21 @@ var theEarth = (function(){
     };
 }) ();
 
+//Convert km from earthRadius to miles and vice versa
+var meterConversion = (function() {
+    var miToKm = function(distance) {
+        return parseFloat(distance / 1000);
+    };
+    var kmToMi = function(distance) {
+        return parseFloat(distance * 1000);
+    };
+    return {
+        miToKm : miToKm,
+        kmToMi : kmToMi
+    };
+})();
+
+// GET list of pets 
 module.exports.petsListByDistance = function (req, res) {
    var lng = parseFloat(req.query.lng);  //get coordinates from query string and convert from strings to numbers
    var lat = parseFloat(req.query.lat);
@@ -33,11 +48,11 @@ module.exports.petsListByDistance = function (req, res) {
    };
    var geoOptions = {                       //options object incluing max distance set to maxDistance in miles and result list limited to 10
        spherical: true,
-       maxDistance: theEarth.getRadsFromDistance(maxDistance),
+       maxDistance: meterConversion.kmToMi(maxDistance),
        num: 10
    };
-    if (!lng || !lat || !maxDistance) {
-    console.log('locationsListByDistance missing params');
+    if ((!lng && lng!==0) || (!lat && lat!==0) || ! maxDistance) {
+    console.log('petsListByDistance missing params');
     sendJsonResponse(res, 404, {
       "message": "lng, lat and maxDistance query parameters are all required"
     });
@@ -61,7 +76,7 @@ var buildPetsList = function(req, res, results, stats) {
   var pets = [];
   results.forEach(function(doc) {
     pets.push({
-      distance: theEarth.getDistanceFromRads(doc.dis),
+      distance: meterConversion.miToKm(doc.dis),
       school: doc.obj.school,
       address: doc.obj.address,
       haveCar: doc.obj.haveCar,
@@ -163,7 +178,10 @@ module.exports.petsDeleteOne = function (req, res) {
      sendJsonResponse(res, 200, {"status" : "success"});
 };
 
+//POST a new pet
+// /api/pets
 module.exports.petsCreate = function (req, res) {
+    console.log(req.body);
     Pet.create({
        provider: req.body.provider,
        //serviceType: req.body.serviceType.split(","),
@@ -182,11 +200,11 @@ module.exports.petsCreate = function (req, res) {
        sat: req.body.sat,
        haveCar: req.body.haveCar,
        coords: [parseFloat(req.body.lng), parseFloat(req.body.lat)]
-    }, function(err, provider) {
+    }, function(err, pet) {
         if (err) {
             sendJsonResponse(res, 400, err);
         } else {
-            sendJsonResponse(res, 201, provider);
+            sendJsonResponse(res, 201, pet);
         }
     });
 };

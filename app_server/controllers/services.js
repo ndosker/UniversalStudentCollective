@@ -1,3 +1,5 @@
+var request = require('request');
+
 /* GET 'home' page */
 module.exports.login = function(req, res) {
 	res.render('login-signup', {title: 'Login info'});
