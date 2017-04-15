@@ -59,8 +59,8 @@ mongoose.model('Provider', providerSchema);
 //Pet Services Schema
 var petSchema = new Schema ({
     provider: {
-    type: Boolean,
-    required: true},
+        type: Boolean,
+        required: true},
    // serviceTypes: [serviceTypeSchema],
     serviceTypes: String,
     school: String,
