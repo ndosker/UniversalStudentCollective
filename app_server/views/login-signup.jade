@@ -9,6 +9,10 @@ html
     link(rel='stylesheet', type='text/css', href='/stylesheets/loginCSS.css')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+    script.
+     function goMain() {
+         window.location.href = '/main'
+     }
   body
     .main
       #topBar
@@ -16,7 +20,7 @@ html
         form#loginForm
           input#userNameInput(type='text', name='user', placeholder='User name')
           input#passwordInput(type='password', name='password', placeholder='Password')
-          button.btn.btn-secondary(type='button') Log In
+          button.btn.btn-secondary(type='button' onclick='goMain()') Log In
       .mainContainer
         .leftForm
           img(src='https://static.pexels.com/photos/207569/pexels-photo-207569.jpeg')
@@ -68,4 +72,4 @@ html
                 | No
               input#ifYes(type='text', name='allergies-list', style='display:none', placeholder='My Allergies')
             br
-            button#createAccountButton.btn.btn-secondary(type='button') Create an Account
+            button#createAccountButton.btn.btn-secondary(type='button' onclick='goMain()') Create an Account
