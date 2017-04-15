@@ -153,6 +153,22 @@ module.exports.providersUpdateOne = function (req, res) {
 };
 
 module.exports.providersDeleteOne = function (req, res) {
-     sendJsonResponse(res, 200, {"status" : "success"});
+     var providerid = req.params.providerid;
+     if (providerid) {
+         Prov
+            .findByIdAndRemove(providerid)
+            .exec (
+                function (err, location) {
+                    if (err) {
+                        sendJsonResponse(res, 404, err);
+                        return;
+                    }
+                    sendJsonResponse(res, 204, providerid);
+                });
+     } else {
+         sendJsonResponse(res, 404, {
+             "message": "No providerid"
+         });
+     }
 };
 
