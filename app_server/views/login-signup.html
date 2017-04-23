@@ -1,0 +1,90 @@
+<!doctype html>
+<html(lang='en')>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Universal Student Collective</title>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy" >
+    <link rel="stylesheet" type="text/css" href="/stylesheets/mainStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/loginCSS.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function goMain(){
+            window.location.href = '/main';
+        }
+    </script>
+</head>
+
+<body>
+<div class="main" ng-app="uscApp">
+    <div id="topBar">
+        <p id="uscHeader">Universal Student Collective</p>
+        <form id="loginForm">
+            <input id="userNameInput" type="text" name="user" placeholder="Email">
+            <input id="passwordInput" type="password" name="password" placeholder="Password">
+            <button type="button" class="btn btn-secondary">Log In</button>
+        </form>
+    </div>
+
+    <div class="mainContainer">
+        <div class="leftForm">
+          <img src="https://static.pexels.com/photos/207569/pexels-photo-207569.jpeg">
+          <p>Want to connect more with your fellow students? Join the Universal Student Collective!
+          Share your talents to gain reputation among your peers, and get access to reliable members of your community. Find and offer services such as:
+          <ul>
+            <li>Goods Exchange</li>
+            <li>Ride Share</li>
+            <li>Pet Care</li>
+            <li>Meal Sharing</li>
+          </ul>
+          <p>And much more! Join today to enhance your college experience.</p>
+      </div>
+        <div class="rightForm">
+            <p id="pSignUp">Sign Up</p>
+            <form ng-controller="SignupCtrl">
+                <div class="row">
+                    <input size="35" type="text" ng-model="user.firstName" name="firstname" placeholder="First name">
+                    <input size="35" type="text" ng-model="user.lastName" name="lastname" placeholder="Last name"><br>
+                </div>
+
+                <!--Need to add some sort of filter to make sure only .edu emails can get through.-->
+                <div class="row">
+                    <input size="35" type="text" ng-model="user.email" name="email" placeholder="E-mail">
+                    <input size="35" type="text" ng-model="user.college" name="college" placeholder="College name">
+                </div>
+
+                <div class="row">
+                    <input size="35" type="text" ng-model="user.address" name="address" placeholder="My Location (City, State, Country)">
+                    <input size="35" type="text" ng-model="user.diet" name="diet" placeholder="Diet Restrictions">
+                    <br>
+                </div>
+
+                <div class="row">
+                    <strong></strong><input size="8" ng-model="user.dogNum" type="text" name="dog" placeholder="# of dogs">
+                    <strong></strong><input size="8" ng-model="user.catNum" type="text" name="cat" placeholder="# of cats">
+                    <strong></strong><input size="41" ng-model="user.otherPet" type="text" name="pet" placeholder="Other pets">
+                    <strong></strong><input size="9" ng-model="user.otherNum" type="text" name="pet" placeholder="# of others">
+                </div>
+
+                <!--<div class="row">
+                    <div id="allergiesContainer">
+                        <strong>Allergies:</strong>
+                        <input type="radio" name="allergies" onclick="show();" value="true"><strong>Yes</strong>
+                        <input type="radio" name="allergies" onclick="hide();" value="false" checked><strong>No</strong>
+                    </div>
+                    <div id="ridesContainer">
+                        <strong>Ride Share Driver?</strong>
+                        <input type="radio" name="driver" value="true" checked>Yes
+                        <input type="radio" name="driver" value="false">No
+                    </div>
+                          <input type="text" name="allergies-list" style="display:none" id="ifYes" placeholder="My Allergies">
+                </div> -->
+                <br><button id="createAccountButton" type="button" class="btn btn-secondary" ng-click="submit" onclick="goMain()">Create an Account</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

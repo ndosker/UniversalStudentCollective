@@ -182,7 +182,7 @@ var goodsSchema = new Schema ({
 //         type: String}
 // });
 
-// mongoose.model('Users', userSchema);
+// mongoose.model('Users', usersSchema);
 
 
 // mongoose.model('Location', locationSchema);
@@ -211,7 +211,7 @@ var goodsSchema = new Schema ({
 
 
 // //model for our schema to use
-// mongoose.model('Profile', profileSchema);
+// 
 
 // //grab the things we need
 // var mongoose = require('mongoose');
@@ -230,44 +230,51 @@ var goodsSchema = new Schema ({
 // ??//Pets//Dog+Number/Cat+Number/Other w/Input field + Number
 // //Ride Share Driver? Boolean//Yes/No
 
-// var profileSchema = new Schema ({
-//     firstName: { 
-//         type: String, 
-//         required: true
-//         max:100},
-//     lastName: {
-//         type: String, 
-//         required: true
-//         max:100},
-//     email: {
-//         type: String, 
-//         required: true},
+ var userSchema = new Schema ({
+     firstName: { 
+         type: String, 
+         required: true},
+     lastName: {
+         type: String, 
+         required: true},
+     email: {
+         type: String, 
+         required: true},
 //     password: {
 //         type: String, 
-//         required: true},
-//     collegeName: {
-//         type: String,
-//         required: true
-//  max: 100},
-//     currentCity: {
-//         type: String,
-//         required: true},
+//         required: false},
+     college: {
+         type: String,
+         required: true},
+     address: {
+         type: String,
+         required: true},
 //     dietRestrictions: {
 //         type: String,
 // 	 enum: [‘Vegan’, ‘Vegetarian’, ‘Gluten-Free’, 
 // 	 ‘Paleo’, ‘Organic’, ‘Locally Grown’, ‘Other’],
-//         required: true},
+//         required: false},
 //     allergies: {
 // 	active: Boolean, 
-// 	type: String},
+// 	type: String,
+//      required: false},
+    dogNum: {
+        count: Number,
+        type: String
+    },
+    catNum: {
+        count: Number,
+        type: String
+    }
 //     pets: {
-// 	count: Number,
-// 	type: [String]},
+//         count: Number,
+//         type: [String]},
 //     rides: {
 // 	driver: Boolean, 
-// 	type: String},
-// });
-
+// 	type: String,
+//      required: false},
+ });
+mongoose.model('User', userSchema);
 
 // mongoose.model('Login', loginSchema);
 
